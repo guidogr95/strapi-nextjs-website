@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_seo_twitter_seos",
+  "info": {
+    "name": "TwitterSEO",
+    "icon": "assistive-listening-systems"
+  },
+  "options": {},
+  "attributes": {
+    "Description": {
+      "type": "text",
+      "maxLength": 170
+    },
+    "Title": {
+      "type": "string",
+      "maxLength": 170
+    },
+    "Site": {
+      "type": "string"
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Creator": {
+      "type": "string"
+    }
+  }
+}

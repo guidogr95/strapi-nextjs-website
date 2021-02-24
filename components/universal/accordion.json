@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_universal_accordions",
+  "info": {
+    "name": "Accordion",
+    "icon": "arrow-alt-circle-up",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "universal.accordion-item"
+    },
+    "Icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

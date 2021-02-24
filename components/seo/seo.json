@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_seo_seos",
+  "info": {
+    "name": "SEO",
+    "icon": "bullhorn",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "GoogleSEO": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.google-seo",
+      "required": true
+    },
+    "FacebookSeo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.social-media-seo"
+    },
+    "TwitterSeo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.twitter-seo",
+      "required": true
+    }
+  }
+}

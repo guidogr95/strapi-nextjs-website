@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_universal_accordion_items",
+  "info": {
+    "name": "AccordionItem",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Content": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

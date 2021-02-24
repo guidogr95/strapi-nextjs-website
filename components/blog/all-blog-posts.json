@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_blog_all_blog_posts",
+  "info": {
+    "name": "AllBlogPosts",
+    "icon": "clone"
+  },
+  "options": {},
+  "attributes": {
+    "MaxPosts": {
+      "type": "integer",
+      "min": 1
+    }
+  }
+}

@@ -1,4 +1,4 @@
-{
+node_modules/strapi/bin/strapi.js start{
   "name": "strapi-vexxhost",
   "private": true,
   "version": "0.1.0",
@@ -7,29 +7,21 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi",
-    "postinstall": "patch-package"
+    "strapi": "strapi"
   },
   "devDependencies": {},
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "find-config": "^1.0.0",
-    "knex": "<0.20.0",
-    "pg": "latest",
     "strapi": "3.4.4",
     "strapi-admin": "3.4.4",
-    "strapi-connector-bookshelf": "3.4.4",
-    "strapi-plugin-ckeditor5": "^1.2.0",
-    "strapi-plugin-content-manager": "3.4.4",
-    "strapi-plugin-content-type-builder": "3.4.4",
-    "strapi-plugin-documentation": "^3.4.4",
-    "strapi-plugin-email": "3.4.4",
-    "strapi-plugin-graphql": "^3.4.4",
-    "strapi-plugin-upload": "3.4.4",
-    "strapi-plugin-users-permissions": "3.4.4",
-    "strapi-provider-upload-cloudinary": "^3.5.1",
     "strapi-utils": "3.4.4",
-    "styled-components": "^5.2.1"
+    "strapi-plugin-content-type-builder": "3.4.4",
+    "strapi-plugin-content-manager": "3.4.4",
+    "strapi-plugin-users-permissions": "3.4.4",
+    "strapi-plugin-email": "3.4.4",
+    "strapi-plugin-upload": "3.4.4",
+    "strapi-connector-bookshelf": "3.4.4",
+    "knex": "<0.20.0",
+    "pg": "latest"
   },
   "author": {
     "name": "A Strapi developer"

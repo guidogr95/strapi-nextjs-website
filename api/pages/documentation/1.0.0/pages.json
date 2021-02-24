@@ -1,0 +1,2846 @@
+{
+  "paths": {
+    "/pages": {
+      "get": {
+        "deprecated": false,
+        "description": "Find all the pages's records",
+        "responses": {
+          "200": {
+            "description": "Retrieve pages document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Pages"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Pages"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new pages record",
+        "responses": {
+          "200": {
+            "description": "Retrieve pages document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pages"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Pages"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewPages"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pages/count": {
+      "get": {
+        "deprecated": false,
+        "description": "Retrieve the numver of pages documents",
+        "responses": {
+          "200": {
+            "description": "Retrieve pages document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Pages"
+        ],
+        "parameters": []
+      }
+    },
+    "/pages/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one pages record",
+        "responses": {
+          "200": {
+            "description": "Retrieve pages document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pages"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Pages"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single pages record",
+        "responses": {
+          "200": {
+            "description": "Retrieve pages document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pages"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Pages"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewPages"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single pages record",
+        "responses": {
+          "200": {
+            "description": "deletes a single pages based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Pages"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Pages": {
+        "required": [
+          "id",
+          "Title",
+          "Slug",
+          "PageSEO"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "Title": {
+            "type": "string"
+          },
+          "Body": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blog.blog-nav",
+                        "blog.featured-post-slider",
+                        "blog.all-blog-posts",
+                        "universal.small-header",
+                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
+                        "tutorials.all-tutorials",
+                        "universal.text-header",
+                        "videos.all-videos",
+                        "faqs.faq-accordion",
+                        "universal.accordion",
+                        "universal.card-grid-thumbnail-and-icon"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "BlogNavItem": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "Label",
+                          "Slug"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "Label": {
+                            "type": "string"
+                          },
+                          "Slug": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blog.blog-nav",
+                        "blog.featured-post-slider",
+                        "blog.all-blog-posts",
+                        "universal.small-header",
+                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
+                        "tutorials.all-tutorials",
+                        "universal.text-header",
+                        "videos.all-videos",
+                        "faqs.faq-accordion",
+                        "universal.accordion",
+                        "universal.card-grid-thumbnail-and-icon"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "MaxPosts": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blog.blog-nav",
+                        "blog.featured-post-slider",
+                        "blog.all-blog-posts",
+                        "universal.small-header",
+                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
+                        "tutorials.all-tutorials",
+                        "universal.text-header",
+                        "videos.all-videos",
+                        "faqs.faq-accordion",
+                        "universal.accordion",
+                        "universal.card-grid-thumbnail-and-icon"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "MaxPosts": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blog.blog-nav",
+                        "blog.featured-post-slider",
+                        "blog.all-blog-posts",
+                        "universal.small-header",
+                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
+                        "tutorials.all-tutorials",
+                        "universal.text-header",
+                        "videos.all-videos",
+                        "faqs.faq-accordion",
+                        "universal.accordion",
+                        "universal.card-grid-thumbnail-and-icon"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "Title": {
+                      "type": "string"
+                    },
+                    "Subtitle": {
+                      "type": "string",
+                      "maxLength": 170
+                    },
+                    "Image": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Background": {
+                      "type": "string",
+                      "default": "#2a1659"
+                    },
+                    "TitleColor": {
+                      "type": "string",
+                      "default": "white"
+                    },
+                    "SubtitleColor": {
+                      "type": "string",
+                      "default": "white"
+                    },
+                    "HeaderImage": {
+                      "type": "string",
+                      "default": "Custom",
+                      "enum": [
+                        "Custom",
+                        "Resources",
+                        "Whitepapers",
+                        "Tutorials"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "Title",
+                    "HeaderImage"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blog.blog-nav",
+                        "blog.featured-post-slider",
+                        "blog.all-blog-posts",
+                        "universal.small-header",
+                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
+                        "tutorials.all-tutorials",
+                        "universal.text-header",
+                        "videos.all-videos",
+                        "faqs.faq-accordion",
+                        "universal.accordion",
+                        "universal.card-grid-thumbnail-and-icon"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "ResourceLink": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "Resource": {
+                            "required": [
+                              "id",
+                              "HeaderTitle",
+                              "Slug",
+                              "Thumbnail",
+                              "BookCover",
+                              "Title"
+                            ],
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "HeaderTitle": {
+                                "type": "string"
+                              },
+                              "Subtitle": {
+                                "type": "string"
+                              },
+                              "Slug": {
+                                "type": "string"
+                              },
+                              "Thumbnail": {
+                                "type": "string"
+                              },
+                              "BookCover": {
+                                "type": "string"
+                              },
+                              "Content": {
+                                "type": "string"
+                              },
+                              "Title": {
+                                "type": "string"
+                              },
+                              "published_at": {
+                                "type": "string"
+                              },
+                              "created_by": {
+                                "type": "string"
+                              },
+                              "updated_by": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blog.blog-nav",
+                        "blog.featured-post-slider",
+                        "blog.all-blog-posts",
+                        "universal.small-header",
+                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
+                        "tutorials.all-tutorials",
+                        "universal.text-header",
+                        "videos.all-videos",
+                        "faqs.faq-accordion",
+                        "universal.accordion",
+                        "universal.card-grid-thumbnail-and-icon"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "MaxPosts": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blog.blog-nav",
+                        "blog.featured-post-slider",
+                        "blog.all-blog-posts",
+                        "universal.small-header",
+                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
+                        "tutorials.all-tutorials",
+                        "universal.text-header",
+                        "videos.all-videos",
+                        "faqs.faq-accordion",
+                        "universal.accordion",
+                        "universal.card-grid-thumbnail-and-icon"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "Title": {
+                      "type": "string"
+                    },
+                    "Subtitle": {
+                      "type": "string"
+                    },
+                    "CTA": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "Link"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "Label": {
+                          "type": "string"
+                        },
+                        "Color": {
+                          "type": "string",
+                          "default": "Primary",
+                          "enum": [
+                            "Primary",
+                            "Secondary"
+                          ]
+                        },
+                        "Link": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Background": {
+                      "type": "string"
+                    },
+                    "HeaderSize": {
+                      "type": "string",
+                      "default": "small",
+                      "enum": [
+                        "small",
+                        "medium",
+                        "large"
+                      ]
+                    },
+                    "TitleColor": {
+                      "type": "string"
+                    },
+                    "SubtitleColor": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "Title"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blog.blog-nav",
+                        "blog.featured-post-slider",
+                        "blog.all-blog-posts",
+                        "universal.small-header",
+                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
+                        "tutorials.all-tutorials",
+                        "universal.text-header",
+                        "videos.all-videos",
+                        "faqs.faq-accordion",
+                        "universal.accordion",
+                        "universal.card-grid-thumbnail-and-icon"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "DisplayFeatured": {
+                      "type": "boolean",
+                      "default": true
+                    },
+                    "Video": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "Title",
+                          "Link"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "Title": {
+                            "type": "string"
+                          },
+                          "Featured": {
+                            "type": "boolean",
+                            "default": false
+                          },
+                          "Link": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blog.blog-nav",
+                        "blog.featured-post-slider",
+                        "blog.all-blog-posts",
+                        "universal.small-header",
+                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
+                        "tutorials.all-tutorials",
+                        "universal.text-header",
+                        "videos.all-videos",
+                        "faqs.faq-accordion",
+                        "universal.accordion",
+                        "universal.card-grid-thumbnail-and-icon"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "AllowSearchBar": {
+                      "type": "boolean",
+                      "default": true
+                    },
+                    "Accordion": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "Title": {
+                            "type": "string"
+                          },
+                          "Item": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "required": [
+                                "id",
+                                "Title",
+                                "Content"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "type": "string"
+                                },
+                                "Title": {
+                                  "type": "string"
+                                },
+                                "Content": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          },
+                          "Icon": {
+                            "required": [
+                              "id",
+                              "name",
+                              "hash",
+                              "mime",
+                              "size",
+                              "url",
+                              "provider"
+                            ],
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "alternativeText": {
+                                "type": "string"
+                              },
+                              "caption": {
+                                "type": "string"
+                              },
+                              "width": {
+                                "type": "integer"
+                              },
+                              "height": {
+                                "type": "integer"
+                              },
+                              "formats": {
+                                "type": "object"
+                              },
+                              "hash": {
+                                "type": "string"
+                              },
+                              "ext": {
+                                "type": "string"
+                              },
+                              "mime": {
+                                "type": "string"
+                              },
+                              "size": {
+                                "type": "number"
+                              },
+                              "url": {
+                                "type": "string"
+                              },
+                              "previewUrl": {
+                                "type": "string"
+                              },
+                              "provider": {
+                                "type": "string"
+                              },
+                              "provider_metadata": {
+                                "type": "object"
+                              },
+                              "related": {
+                                "type": "string"
+                              },
+                              "created_by": {
+                                "type": "string"
+                              },
+                              "updated_by": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blog.blog-nav",
+                        "blog.featured-post-slider",
+                        "blog.all-blog-posts",
+                        "universal.small-header",
+                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
+                        "tutorials.all-tutorials",
+                        "universal.text-header",
+                        "videos.all-videos",
+                        "faqs.faq-accordion",
+                        "universal.accordion",
+                        "universal.card-grid-thumbnail-and-icon"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "Title": {
+                      "type": "string"
+                    },
+                    "Item": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "Title",
+                          "Content"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "Title": {
+                            "type": "string"
+                          },
+                          "Content": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "Icon": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blog.blog-nav",
+                        "blog.featured-post-slider",
+                        "blog.all-blog-posts",
+                        "universal.small-header",
+                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
+                        "tutorials.all-tutorials",
+                        "universal.text-header",
+                        "videos.all-videos",
+                        "faqs.faq-accordion",
+                        "universal.accordion",
+                        "universal.card-grid-thumbnail-and-icon"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "CardGridTIItem": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "Title",
+                          "Thumbnail",
+                          "LinkType"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "Title": {
+                            "type": "string"
+                          },
+                          "Thumbnail": {
+                            "required": [
+                              "id",
+                              "name",
+                              "hash",
+                              "mime",
+                              "size",
+                              "url",
+                              "provider"
+                            ],
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "alternativeText": {
+                                "type": "string"
+                              },
+                              "caption": {
+                                "type": "string"
+                              },
+                              "width": {
+                                "type": "integer"
+                              },
+                              "height": {
+                                "type": "integer"
+                              },
+                              "formats": {
+                                "type": "object"
+                              },
+                              "hash": {
+                                "type": "string"
+                              },
+                              "ext": {
+                                "type": "string"
+                              },
+                              "mime": {
+                                "type": "string"
+                              },
+                              "size": {
+                                "type": "number"
+                              },
+                              "url": {
+                                "type": "string"
+                              },
+                              "previewUrl": {
+                                "type": "string"
+                              },
+                              "provider": {
+                                "type": "string"
+                              },
+                              "provider_metadata": {
+                                "type": "object"
+                              },
+                              "related": {
+                                "type": "string"
+                              },
+                              "created_by": {
+                                "type": "string"
+                              },
+                              "updated_by": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "Page": {
+                            "required": [
+                              "id",
+                              "Title",
+                              "Slug",
+                              "PageSEO"
+                            ],
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "Title": {
+                                "type": "string"
+                              },
+                              "Body": {
+                                "type": "dynamiczone"
+                              },
+                              "Slug": {
+                                "type": "uid"
+                              },
+                              "Parent": {
+                                "type": "string"
+                              },
+                              "PageSEO": {
+                                "type": "component"
+                              },
+                              "published_at": {
+                                "type": "string"
+                              },
+                              "created_by": {
+                                "type": "string"
+                              },
+                              "updated_by": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "LinkType": {
+                            "type": "string",
+                            "default": "Custom",
+                            "enum": [
+                              "Custom",
+                              "Page"
+                            ]
+                          },
+                          "CustomLink": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "CardGridTIItem"
+                  ]
+                }
+              ]
+            }
+          },
+          "Slug": {
+            "type": "uid"
+          },
+          "Parent": {
+            "required": [
+              "id",
+              "Title",
+              "Slug",
+              "PageSEO"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "Title": {
+                "type": "string"
+              },
+              "Body": {
+                "type": "dynamiczone"
+              },
+              "Slug": {
+                "type": "uid"
+              },
+              "Parent": {
+                "type": "string"
+              },
+              "PageSEO": {
+                "type": "component"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "PageSEO": {
+            "type": "object",
+            "required": [
+              "id",
+              "GoogleSEO",
+              "TwitterSeo"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "GoogleSEO": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "Title"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 70
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 170
+                  }
+                }
+              },
+              "FacebookSeo": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Url": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Image": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "SiteName": {
+                    "type": "string"
+                  }
+                }
+              },
+              "TwitterSeo": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Site": {
+                    "type": "string"
+                  },
+                  "Image": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "Creator": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewPages": {
+        "required": [
+          "Title",
+          "Slug",
+          "PageSEO"
+        ],
+        "properties": {
+          "Title": {
+            "type": "string"
+          },
+          "Body": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blog.blog-nav",
+                        "blog.featured-post-slider",
+                        "blog.all-blog-posts",
+                        "universal.small-header",
+                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
+                        "tutorials.all-tutorials",
+                        "universal.text-header",
+                        "videos.all-videos",
+                        "faqs.faq-accordion",
+                        "universal.accordion",
+                        "universal.card-grid-thumbnail-and-icon"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "BlogNavItem": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "Label",
+                          "Slug"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "Label": {
+                            "type": "string"
+                          },
+                          "Slug": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blog.blog-nav",
+                        "blog.featured-post-slider",
+                        "blog.all-blog-posts",
+                        "universal.small-header",
+                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
+                        "tutorials.all-tutorials",
+                        "universal.text-header",
+                        "videos.all-videos",
+                        "faqs.faq-accordion",
+                        "universal.accordion",
+                        "universal.card-grid-thumbnail-and-icon"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "MaxPosts": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blog.blog-nav",
+                        "blog.featured-post-slider",
+                        "blog.all-blog-posts",
+                        "universal.small-header",
+                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
+                        "tutorials.all-tutorials",
+                        "universal.text-header",
+                        "videos.all-videos",
+                        "faqs.faq-accordion",
+                        "universal.accordion",
+                        "universal.card-grid-thumbnail-and-icon"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "MaxPosts": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blog.blog-nav",
+                        "blog.featured-post-slider",
+                        "blog.all-blog-posts",
+                        "universal.small-header",
+                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
+                        "tutorials.all-tutorials",
+                        "universal.text-header",
+                        "videos.all-videos",
+                        "faqs.faq-accordion",
+                        "universal.accordion",
+                        "universal.card-grid-thumbnail-and-icon"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "Title": {
+                      "type": "string"
+                    },
+                    "Subtitle": {
+                      "type": "string",
+                      "maxLength": 170
+                    },
+                    "Image": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Background": {
+                      "type": "string",
+                      "default": "#2a1659"
+                    },
+                    "TitleColor": {
+                      "type": "string",
+                      "default": "white"
+                    },
+                    "SubtitleColor": {
+                      "type": "string",
+                      "default": "white"
+                    },
+                    "HeaderImage": {
+                      "type": "string",
+                      "default": "Custom",
+                      "enum": [
+                        "Custom",
+                        "Resources",
+                        "Whitepapers",
+                        "Tutorials"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "Title",
+                    "HeaderImage"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blog.blog-nav",
+                        "blog.featured-post-slider",
+                        "blog.all-blog-posts",
+                        "universal.small-header",
+                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
+                        "tutorials.all-tutorials",
+                        "universal.text-header",
+                        "videos.all-videos",
+                        "faqs.faq-accordion",
+                        "universal.accordion",
+                        "universal.card-grid-thumbnail-and-icon"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "ResourceLink": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "Resource": {
+                            "required": [
+                              "id",
+                              "HeaderTitle",
+                              "Slug",
+                              "Thumbnail",
+                              "BookCover",
+                              "Title"
+                            ],
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "HeaderTitle": {
+                                "type": "string"
+                              },
+                              "Subtitle": {
+                                "type": "string"
+                              },
+                              "Slug": {
+                                "type": "string"
+                              },
+                              "Thumbnail": {
+                                "type": "string"
+                              },
+                              "BookCover": {
+                                "type": "string"
+                              },
+                              "Content": {
+                                "type": "string"
+                              },
+                              "Title": {
+                                "type": "string"
+                              },
+                              "published_at": {
+                                "type": "string"
+                              },
+                              "created_by": {
+                                "type": "string"
+                              },
+                              "updated_by": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blog.blog-nav",
+                        "blog.featured-post-slider",
+                        "blog.all-blog-posts",
+                        "universal.small-header",
+                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
+                        "tutorials.all-tutorials",
+                        "universal.text-header",
+                        "videos.all-videos",
+                        "faqs.faq-accordion",
+                        "universal.accordion",
+                        "universal.card-grid-thumbnail-and-icon"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "MaxPosts": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blog.blog-nav",
+                        "blog.featured-post-slider",
+                        "blog.all-blog-posts",
+                        "universal.small-header",
+                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
+                        "tutorials.all-tutorials",
+                        "universal.text-header",
+                        "videos.all-videos",
+                        "faqs.faq-accordion",
+                        "universal.accordion",
+                        "universal.card-grid-thumbnail-and-icon"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "Title": {
+                      "type": "string"
+                    },
+                    "Subtitle": {
+                      "type": "string"
+                    },
+                    "CTA": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "Link"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "Label": {
+                          "type": "string"
+                        },
+                        "Color": {
+                          "type": "string",
+                          "default": "Primary",
+                          "enum": [
+                            "Primary",
+                            "Secondary"
+                          ]
+                        },
+                        "Link": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Background": {
+                      "type": "string"
+                    },
+                    "HeaderSize": {
+                      "type": "string",
+                      "default": "small",
+                      "enum": [
+                        "small",
+                        "medium",
+                        "large"
+                      ]
+                    },
+                    "TitleColor": {
+                      "type": "string"
+                    },
+                    "SubtitleColor": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "Title"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blog.blog-nav",
+                        "blog.featured-post-slider",
+                        "blog.all-blog-posts",
+                        "universal.small-header",
+                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
+                        "tutorials.all-tutorials",
+                        "universal.text-header",
+                        "videos.all-videos",
+                        "faqs.faq-accordion",
+                        "universal.accordion",
+                        "universal.card-grid-thumbnail-and-icon"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "DisplayFeatured": {
+                      "type": "boolean",
+                      "default": true
+                    },
+                    "Video": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "Title",
+                          "Link"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "Title": {
+                            "type": "string"
+                          },
+                          "Featured": {
+                            "type": "boolean",
+                            "default": false
+                          },
+                          "Link": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blog.blog-nav",
+                        "blog.featured-post-slider",
+                        "blog.all-blog-posts",
+                        "universal.small-header",
+                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
+                        "tutorials.all-tutorials",
+                        "universal.text-header",
+                        "videos.all-videos",
+                        "faqs.faq-accordion",
+                        "universal.accordion",
+                        "universal.card-grid-thumbnail-and-icon"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "AllowSearchBar": {
+                      "type": "boolean",
+                      "default": true
+                    },
+                    "Accordion": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "Title": {
+                            "type": "string"
+                          },
+                          "Item": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "required": [
+                                "id",
+                                "Title",
+                                "Content"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "type": "string"
+                                },
+                                "Title": {
+                                  "type": "string"
+                                },
+                                "Content": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          },
+                          "Icon": {
+                            "required": [
+                              "id",
+                              "name",
+                              "hash",
+                              "mime",
+                              "size",
+                              "url",
+                              "provider"
+                            ],
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "alternativeText": {
+                                "type": "string"
+                              },
+                              "caption": {
+                                "type": "string"
+                              },
+                              "width": {
+                                "type": "integer"
+                              },
+                              "height": {
+                                "type": "integer"
+                              },
+                              "formats": {
+                                "type": "object"
+                              },
+                              "hash": {
+                                "type": "string"
+                              },
+                              "ext": {
+                                "type": "string"
+                              },
+                              "mime": {
+                                "type": "string"
+                              },
+                              "size": {
+                                "type": "number"
+                              },
+                              "url": {
+                                "type": "string"
+                              },
+                              "previewUrl": {
+                                "type": "string"
+                              },
+                              "provider": {
+                                "type": "string"
+                              },
+                              "provider_metadata": {
+                                "type": "object"
+                              },
+                              "related": {
+                                "type": "string"
+                              },
+                              "created_by": {
+                                "type": "string"
+                              },
+                              "updated_by": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blog.blog-nav",
+                        "blog.featured-post-slider",
+                        "blog.all-blog-posts",
+                        "universal.small-header",
+                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
+                        "tutorials.all-tutorials",
+                        "universal.text-header",
+                        "videos.all-videos",
+                        "faqs.faq-accordion",
+                        "universal.accordion",
+                        "universal.card-grid-thumbnail-and-icon"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "Title": {
+                      "type": "string"
+                    },
+                    "Item": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "Title",
+                          "Content"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "Title": {
+                            "type": "string"
+                          },
+                          "Content": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "Icon": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blog.blog-nav",
+                        "blog.featured-post-slider",
+                        "blog.all-blog-posts",
+                        "universal.small-header",
+                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
+                        "tutorials.all-tutorials",
+                        "universal.text-header",
+                        "videos.all-videos",
+                        "faqs.faq-accordion",
+                        "universal.accordion",
+                        "universal.card-grid-thumbnail-and-icon"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "CardGridTIItem": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "Title",
+                          "Thumbnail",
+                          "LinkType"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "Title": {
+                            "type": "string"
+                          },
+                          "Thumbnail": {
+                            "required": [
+                              "id",
+                              "name",
+                              "hash",
+                              "mime",
+                              "size",
+                              "url",
+                              "provider"
+                            ],
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "alternativeText": {
+                                "type": "string"
+                              },
+                              "caption": {
+                                "type": "string"
+                              },
+                              "width": {
+                                "type": "integer"
+                              },
+                              "height": {
+                                "type": "integer"
+                              },
+                              "formats": {
+                                "type": "object"
+                              },
+                              "hash": {
+                                "type": "string"
+                              },
+                              "ext": {
+                                "type": "string"
+                              },
+                              "mime": {
+                                "type": "string"
+                              },
+                              "size": {
+                                "type": "number"
+                              },
+                              "url": {
+                                "type": "string"
+                              },
+                              "previewUrl": {
+                                "type": "string"
+                              },
+                              "provider": {
+                                "type": "string"
+                              },
+                              "provider_metadata": {
+                                "type": "object"
+                              },
+                              "related": {
+                                "type": "string"
+                              },
+                              "created_by": {
+                                "type": "string"
+                              },
+                              "updated_by": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "Page": {
+                            "required": [
+                              "id",
+                              "Title",
+                              "Slug",
+                              "PageSEO"
+                            ],
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "Title": {
+                                "type": "string"
+                              },
+                              "Body": {
+                                "type": "dynamiczone"
+                              },
+                              "Slug": {
+                                "type": "uid"
+                              },
+                              "Parent": {
+                                "type": "string"
+                              },
+                              "PageSEO": {
+                                "type": "component"
+                              },
+                              "published_at": {
+                                "type": "string"
+                              },
+                              "created_by": {
+                                "type": "string"
+                              },
+                              "updated_by": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "LinkType": {
+                            "type": "string",
+                            "default": "Custom",
+                            "enum": [
+                              "Custom",
+                              "Page"
+                            ]
+                          },
+                          "CustomLink": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "CardGridTIItem"
+                  ]
+                }
+              ]
+            }
+          },
+          "Slug": {
+            "type": "uid"
+          },
+          "Parent": {
+            "type": "string"
+          },
+          "PageSEO": {
+            "type": "object",
+            "required": [
+              "id",
+              "GoogleSEO",
+              "TwitterSeo"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "GoogleSEO": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "Title"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 70
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 170
+                  }
+                }
+              },
+              "FacebookSeo": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Url": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Image": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "SiteName": {
+                    "type": "string"
+                  }
+                }
+              },
+              "TwitterSeo": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Site": {
+                    "type": "string"
+                  },
+                  "Image": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "Creator": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Pages"
+    }
+  ]
+}

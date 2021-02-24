@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_faqs_faq_accordions",
+  "info": {
+    "name": "FAQ Accordion",
+    "icon": "arrow-alt-circle-down"
+  },
+  "options": {},
+  "attributes": {
+    "AllowSearchBar": {
+      "type": "boolean",
+      "default": true
+    },
+    "Accordion": {
+      "type": "component",
+      "repeatable": true,
+      "component": "universal.accordion"
+    }
+  }
+}

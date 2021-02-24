@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "main_menus",
+  "info": {
+    "name": "Main Menu",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "MenuItemMain": {
+      "type": "component",
+      "repeatable": true,
+      "component": "main-menu.menu-item-main"
+    }
+  }
+}

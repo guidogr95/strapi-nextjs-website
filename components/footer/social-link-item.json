@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_footer_social_link_items",
+  "info": {
+    "name": "SocialLinkItem",
+    "icon": "adjust",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Social": {
+      "model": "social"
+    },
+    "Icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

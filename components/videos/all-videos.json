@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_videos_all_videos",
+  "info": {
+    "name": "AllVideos",
+    "icon": "play",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "DisplayFeatured": {
+      "type": "boolean",
+      "default": true
+    },
+    "Video": {
+      "type": "component",
+      "repeatable": true,
+      "component": "videos.video"
+    }
+  }
+}

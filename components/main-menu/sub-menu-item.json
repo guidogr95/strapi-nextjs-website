@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_main_menu_sub_menu_items",
+  "info": {
+    "name": "SubMenuItem",
+    "icon": "align-right"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string",
+      "required": true
+    },
+    "Page": {
+      "model": "pages"
+    },
+"LinkType": {
+      "type": "enumeration",
+      "enum": [
+        "Custom",
+        "Page"
+      ],
+     "default": "Page",
+     "required": true
+    },
+    "CustomLink": {
+      "type": "string"
+    }
+  }
+}

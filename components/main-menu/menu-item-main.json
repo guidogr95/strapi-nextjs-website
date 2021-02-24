@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_universal_menu_item_mains",
+  "info": {
+    "name": "MenuItem-Main",
+    "icon": "angle-down",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string",
+      "required": true
+    },
+    "Page": {
+      "model": "pages"
+    },
+    "NavSubmenu": {
+      "type": "component",
+      "repeatable": true,
+      "component": "main-menu.nav-submenu"
+    },
+    "LinkType": {
+      "type": "enumeration",
+      "enum": [
+        "Custom",
+        "Page"
+      ],
+     "default": "Page",
+     "required": true
+    },
+    "CustomLink": {
+      "type": "string"
+    }
+  }
+}

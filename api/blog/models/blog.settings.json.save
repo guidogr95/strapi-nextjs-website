@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blogs",
+  "info": {
+    "name": "Blog",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Publisher": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "Thumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "Featured": {
+      "type": "boolean"
+    },
+    "Published": {
+      "type": "datetime",
+      "required": true
+    },
+    "Content": {
+      "type": "richtext"
+    },
+    "ThumbnailBgColorHex": {
+      "type": "text"
+    },
+    "Slug": {
+      "type": "string",
+      "regex": "^[a-z](-?[a-z])*$",
+      "required": true
+    },
+    "TitleColor": {
+      "type": "string"
+    }
+  }
+}

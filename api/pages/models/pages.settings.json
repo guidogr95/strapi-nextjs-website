@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "name": "Pages",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Body": {
+      "type": "dynamiczone",
+      "components": [
+        "blog.blog-nav",
+        "blog.featured-post-slider",
+        "blog.all-blog-posts",
+        "universal.small-header",
+        "whitepapers-ebooks.all-whitepapers-and-ebooks",
+        "tutorials.all-tutorials",
+        "universal.text-header",
+        "videos.all-videos",
+        "faqs.faq-accordion",
+        "universal.accordion",
+        "universal.card-grid-thumbnail-and-icon"
+      ]
+    },
+    "Slug": {
+      "type": "uid",
+      "private": false,
+      "required": true
+    },
+    "Parent": {
+      "model": "pages"
+    },
+    "PageSEO": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo",
+      "required": true
+    }
+  }
+}

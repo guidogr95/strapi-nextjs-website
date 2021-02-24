@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tutorials",
+  "info": {
+    "name": "Tutorials",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Slug": {
+      "type": "string",
+      "required": true,
+      "regex": "^[a-z](-?[a-z])*$"
+    },
+    "Publisher": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "Thumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Published": {
+      "type": "datetime"
+    },
+    "Content": {
+      "type": "richtext",
+      "required": true
+    },
+    "ThumbnailBgColorHex": {
+      "type": "text"
+    },
+    "TitleColor": {
+      "type": "string"
+    }
+  }
+}

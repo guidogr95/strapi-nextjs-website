@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_universal_link_to_resources",
+  "info": {
+    "name": "LinkToResource",
+    "icon": "arrow-right"
+  },
+  "options": {},
+  "attributes": {
+    "Description": {
+      "type": "richtext"
+    },
+    "Resource": {
+      "model": "whitepapers-and-ebooks"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_footer_footer_nav_items",
+  "info": {
+    "name": "FooterNavItem",
+    "icon": "caret-down"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string",
+      "required": true
+    },
+    "FooterNavSubItem": {
+      "type": "component",
+      "repeatable": true,
+      "component": "footer.footer-nav-sub-item"
+    }
+  }
+}

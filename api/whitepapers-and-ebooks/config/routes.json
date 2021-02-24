@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/whitepapers-and-ebooks",
+      "handler": "whitepapers-and-ebooks.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/whitepapers-and-ebooks/count",
+      "handler": "whitepapers-and-ebooks.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/whitepapers-and-ebooks/:id",
+      "handler": "whitepapers-and-ebooks.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/whitepapers-and-ebooks",
+      "handler": "whitepapers-and-ebooks.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/whitepapers-and-ebooks/:id",
+      "handler": "whitepapers-and-ebooks.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/whitepapers-and-ebooks/:id",
+      "handler": "whitepapers-and-ebooks.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

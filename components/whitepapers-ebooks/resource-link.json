@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_whitepapers_ebooks_resource_links",
+  "info": {
+    "name": "ResourceLink",
+    "icon": "apple-alt"
+  },
+  "options": {},
+  "attributes": {
+    "Resource": {
+      "model": "whitepapers-and-ebooks"
+    }
+  }
+}

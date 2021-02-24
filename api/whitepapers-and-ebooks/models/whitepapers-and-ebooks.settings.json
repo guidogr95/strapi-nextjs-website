@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "whitepapers_and_ebooks",
+  "info": {
+    "name": "whitepapers and ebooks",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "HeaderTitle": {
+      "type": "string",
+      "required": true
+    },
+    "Subtitle": {
+      "type": "string"
+    },
+    "Slug": {
+      "type": "string",
+      "required": true,
+      "regex": "^[a-z](-?[a-z])*$"
+    },
+    "Thumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "BookCover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "Content": {
+      "type": "richtext"
+    },
+    "Title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

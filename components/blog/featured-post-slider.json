@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_blog_featured_post_sliders",
+  "info": {
+    "name": "FeaturedPost-Slider",
+    "icon": "angle-double-right"
+  },
+  "options": {},
+  "attributes": {
+    "MaxPosts": {
+      "type": "integer",
+      "unique": false,
+      "min": 1
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_footer_social_links",
+  "info": {
+    "name": "SocialLinks",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "SocialLinkItem": {
+      "type": "component",
+      "repeatable": true,
+      "component": "footer.social-link-item"
+    }
+  }
+}

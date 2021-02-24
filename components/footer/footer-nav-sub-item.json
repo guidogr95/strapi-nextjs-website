@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_footer_footer_nav_sub_items",
+  "info": {
+    "name": "FooterNavSubItem",
+    "icon": "angle-double-down"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string",
+      "required": true
+    },
+    "Page": {
+      "model": "pages"
+    },
+    "Url": {
+      "type": "string"
+    },
+    "Link": {
+      "type": "enumeration",
+      "enum": [
+        "Custom",
+        "Page"
+      ],
+      "default": "Custom",
+      "required": true
+    }
+  }
+}

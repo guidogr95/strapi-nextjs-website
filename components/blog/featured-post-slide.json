@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_blog_featured_post_slides",
+  "info": {
+    "name": "FeaturedPost-Slide",
+    "icon": "angle-right"
+  },
+  "options": {},
+  "attributes": {
+    "HexBackgroundColor": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

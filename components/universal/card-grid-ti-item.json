@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_universal_card_grid_ti_items",
+  "info": {
+    "name": "CardGridTI-Item",
+    "icon": "arrow-circle-down",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Thumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "Page": {
+      "model": "pages"
+    },
+    "LinkType": {
+      "type": "enumeration",
+      "enum": [
+        "Custom",
+        "Page"
+      ],
+      "default": "Custom",
+      "required": true
+    },
+    "CustomLink": {
+      "type": "string"
+    }
+  }
+}

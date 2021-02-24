@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_tutorials_all_tutorials",
+  "info": {
+    "name": "AllTutorials",
+    "icon": "bookmark"
+  },
+  "options": {},
+  "attributes": {
+    "MaxPosts": {
+      "type": "integer"
+    }
+  }
+}

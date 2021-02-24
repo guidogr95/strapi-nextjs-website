@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_universal_text_headers",
+  "info": {
+    "name": "TextHeader",
+    "icon": "asterisk",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "text",
+      "required": true
+    },
+    "Subtitle": {
+      "type": "text"
+    },
+    "CTA": {
+      "type": "component",
+      "repeatable": false,
+      "component": "universal.cta"
+    },
+    "Background": {
+      "type": "text"
+    },
+    "HeaderSize": {
+      "type": "enumeration",
+      "enum": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "default": "small"
+    },
+    "TitleColor": {
+      "type": "string"
+    },
+    "SubtitleColor": {
+      "type": "string"
+    }
+  }
+}

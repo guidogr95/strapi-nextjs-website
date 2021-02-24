@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_seo_google_seos",
+  "info": {
+    "name": "GoogleSEO",
+    "icon": "robot"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 70
+    },
+    "Description": {
+      "type": "text",
+      "maxLength": 170
+    }
+  }
+}

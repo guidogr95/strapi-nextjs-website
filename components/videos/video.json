@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_videos_videos",
+  "info": {
+    "name": "Video",
+    "icon": "grip-horizontal",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "Link": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    }
+  }
+}

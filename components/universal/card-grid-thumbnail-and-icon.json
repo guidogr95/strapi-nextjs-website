@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_universal_card_grid_thumbnail_and_icons",
+  "info": {
+    "name": "CardGrid-ThumbnailAndIcon",
+    "icon": "bible",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "CardGridTIItem": {
+      "type": "component",
+      "repeatable": true,
+      "component": "universal.card-grid-ti-item",
+      "required": true
+    }
+  }
+}

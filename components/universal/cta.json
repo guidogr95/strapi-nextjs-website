@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_universal_ctas",
+  "info": {
+    "name": "CTA",
+    "icon": "arrow-alt-circle-right"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "Color": {
+      "type": "enumeration",
+      "enum": [
+        "Primary",
+        "Secondary"
+      ],
+      "default": "Primary"
+    },
+    "Link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
