@@ -19,7 +19,6 @@
     "strapi": "3.4.4",
     "strapi-admin": "3.4.4",
     "strapi-connector-bookshelf": "3.4.4",
-    "strapi-plugin-ckeditor5": "^1.2.0",
     "strapi-plugin-content-manager": "3.4.4",
     "strapi-plugin-content-type-builder": "3.4.4",
     "strapi-plugin-documentation": "^3.4.4",
@@ -29,7 +28,8 @@
     "strapi-plugin-users-permissions": "3.4.4",
     "strapi-provider-upload-cloudinary": "^3.5.1",
     "strapi-utils": "3.4.4",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "vexxhost-editor": "0.0.5"
   },
   "author": {
     "name": "A Strapi developer"
