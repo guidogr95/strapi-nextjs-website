@@ -2,12 +2,11 @@
   "collectionName": "components_universal_card_grid_thumbnail_and_icons",
   "info": {
     "name": "CardGrid-ThumbnailAndIcon",
-    "icon": "bible",
-    "description": ""
+    "icon": "address-book"
   },
   "options": {},
   "attributes": {
-    "CardGridTIItem": {
+    "CardGridItem": {
       "type": "component",
       "repeatable": true,
       "component": "universal.card-grid-ti-item",

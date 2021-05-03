@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/18/2021 8:04:11 PM"
+    "x-generation-date": "05/03/2021 4:15:19 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -45,6 +45,842 @@
     }
   ],
   "paths": {
+    "/bio-page": {
+      "get": {
+        "deprecated": false,
+        "description": "Find all the bio-page's records",
+        "responses": {
+          "200": {
+            "description": "Retrieve bio-page document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Bio-page"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single bio-page record",
+        "responses": {
+          "200": {
+            "description": "Retrieve bio-page document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Bio-page"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewBio-page"
+              }
+            }
+          }
+        },
+        "parameters": []
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single bio-page record",
+        "responses": {
+          "200": {
+            "description": "deletes a single bio-page based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Bio-page"
+        ],
+        "parameters": []
+      }
+    },
+    "/bio-posts": {
+      "get": {
+        "deprecated": false,
+        "description": "Find all the bio-posts's records",
+        "responses": {
+          "200": {
+            "description": "Retrieve bio-posts document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Bio-posts"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new bio-posts record",
+        "responses": {
+          "200": {
+            "description": "Retrieve bio-posts document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Bio-posts"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewBio-posts"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bio-posts/count": {
+      "get": {
+        "deprecated": false,
+        "description": "Retrieve the numver of bio-posts documents",
+        "responses": {
+          "200": {
+            "description": "Retrieve bio-posts document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Bio-posts"
+        ],
+        "parameters": []
+      }
+    },
+    "/bio-posts/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one bio-posts record",
+        "responses": {
+          "200": {
+            "description": "Retrieve bio-posts document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Bio-posts"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single bio-posts record",
+        "responses": {
+          "200": {
+            "description": "Retrieve bio-posts document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Bio-posts"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewBio-posts"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single bio-posts record",
+        "responses": {
+          "200": {
+            "description": "deletes a single bio-posts based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Bio-posts"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
     "/blogs": {
       "get": {
         "deprecated": false,
@@ -861,6 +1697,517 @@
           "Footer"
         ],
         "parameters": []
+      }
+    },
+    "/forms": {
+      "get": {
+        "deprecated": false,
+        "description": "Find all the forms's records",
+        "responses": {
+          "200": {
+            "description": "Retrieve forms document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Forms"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Forms"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new forms record",
+        "responses": {
+          "200": {
+            "description": "Retrieve forms document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Forms"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Forms"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewForms"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/forms/count": {
+      "get": {
+        "deprecated": false,
+        "description": "Retrieve the numver of forms documents",
+        "responses": {
+          "200": {
+            "description": "Retrieve forms document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Forms"
+        ],
+        "parameters": []
+      }
+    },
+    "/forms/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one forms record",
+        "responses": {
+          "200": {
+            "description": "Retrieve forms document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Forms"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Forms"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single forms record",
+        "responses": {
+          "200": {
+            "description": "Retrieve forms document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Forms"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Forms"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewForms"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single forms record",
+        "responses": {
+          "200": {
+            "description": "deletes a single forms based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Forms"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       }
     },
     "/main-menu": {
@@ -1686,6 +3033,530 @@
         ]
       }
     },
+    "/post-categories": {
+      "get": {
+        "deprecated": false,
+        "description": "Find all the post-categories's records",
+        "responses": {
+          "200": {
+            "description": "Retrieve post-categories document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Post-categories"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new post-categories record",
+        "responses": {
+          "200": {
+            "description": "Retrieve post-categories document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Post-categories"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewPost-categories"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/post-categories/count": {
+      "get": {
+        "deprecated": false,
+        "description": "Retrieve the numver of post-categories documents",
+        "responses": {
+          "200": {
+            "description": "Retrieve post-categories document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Post-categories"
+        ],
+        "parameters": []
+      }
+    },
+    "/post-categories/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one post-categories record",
+        "responses": {
+          "200": {
+            "description": "Retrieve post-categories document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Post-categories"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single post-categories record",
+        "responses": {
+          "200": {
+            "description": "Retrieve post-categories document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Post-categories"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewPost-categories"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single post-categories record",
+        "responses": {
+          "200": {
+            "description": "deletes a single post-categories based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Post-categories"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
     "/socials": {
       "get": {
         "deprecated": false,
@@ -2182,6 +4053,517 @@
         "summary": "",
         "tags": [
           "Social"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/tags": {
+      "get": {
+        "deprecated": false,
+        "description": "Find all the tags's records",
+        "responses": {
+          "200": {
+            "description": "Retrieve tags document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Tags"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Tags"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new tags record",
+        "responses": {
+          "200": {
+            "description": "Retrieve tags document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tags"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Tags"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewTags"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/tags/count": {
+      "get": {
+        "deprecated": false,
+        "description": "Retrieve the numver of tags documents",
+        "responses": {
+          "200": {
+            "description": "Retrieve tags document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Tags"
+        ],
+        "parameters": []
+      }
+    },
+    "/tags/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one tags record",
+        "responses": {
+          "200": {
+            "description": "Retrieve tags document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tags"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Tags"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single tags record",
+        "responses": {
+          "200": {
+            "description": "Retrieve tags document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tags"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Tags"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewTags"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single tags record",
+        "responses": {
+          "200": {
+            "description": "deletes a single tags based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Tags"
         ],
         "parameters": [
           {
@@ -5333,13 +7715,535 @@
   },
   "components": {
     "schemas": {
+      "Bio-page": {
+        "required": [
+          "id",
+          "Posts"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "Title": {
+            "type": "string"
+          },
+          "Logo": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "Posts": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "bio.tutorial",
+                        "bio.blog"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "Post": {
+                      "required": [
+                        "id",
+                        "Title",
+                        "Slug",
+                        "Content",
+                        "PostSEO"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        },
+                        "Slug": {
+                          "type": "string"
+                        },
+                        "Publisher": {
+                          "type": "string"
+                        },
+                        "Thumbnail": {
+                          "type": "string"
+                        },
+                        "Content": {
+                          "type": "string"
+                        },
+                        "ThumbnailBgColorHex": {
+                          "type": "string"
+                        },
+                        "TitleColor": {
+                          "type": "string"
+                        },
+                        "PostSEO": {
+                          "type": "component"
+                        },
+                        "LinkToResource": {
+                          "type": "component"
+                        },
+                        "published_at": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "bio.tutorial",
+                        "bio.blog"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "Post": {
+                      "required": [
+                        "id",
+                        "Title",
+                        "Slug",
+                        "PostSEO",
+                        "Publication"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        },
+                        "Publisher": {
+                          "type": "string"
+                        },
+                        "Thumbnail": {
+                          "type": "string"
+                        },
+                        "Featured": {
+                          "type": "boolean"
+                        },
+                        "Content": {
+                          "type": "string"
+                        },
+                        "ThumbnailBgColorHex": {
+                          "type": "string"
+                        },
+                        "Slug": {
+                          "type": "string"
+                        },
+                        "TitleColor": {
+                          "type": "string"
+                        },
+                        "LinkToResource": {
+                          "type": "component"
+                        },
+                        "PostSEO": {
+                          "type": "component"
+                        },
+                        "Tags": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "categories": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "Publication": {
+                          "type": "string"
+                        },
+                        "published_at": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                }
+              ]
+            }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewBio-page": {
+        "required": [
+          "Posts"
+        ],
+        "properties": {
+          "Title": {
+            "type": "string"
+          },
+          "Posts": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "bio.tutorial",
+                        "bio.blog"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "Post": {
+                      "required": [
+                        "id",
+                        "Title",
+                        "Slug",
+                        "Content",
+                        "PostSEO"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        },
+                        "Slug": {
+                          "type": "string"
+                        },
+                        "Publisher": {
+                          "type": "string"
+                        },
+                        "Thumbnail": {
+                          "type": "string"
+                        },
+                        "Content": {
+                          "type": "string"
+                        },
+                        "ThumbnailBgColorHex": {
+                          "type": "string"
+                        },
+                        "TitleColor": {
+                          "type": "string"
+                        },
+                        "PostSEO": {
+                          "type": "component"
+                        },
+                        "LinkToResource": {
+                          "type": "component"
+                        },
+                        "published_at": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "bio.tutorial",
+                        "bio.blog"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "Post": {
+                      "required": [
+                        "id",
+                        "Title",
+                        "Slug",
+                        "PostSEO",
+                        "Publication"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "Title": {
+                          "type": "string"
+                        },
+                        "Publisher": {
+                          "type": "string"
+                        },
+                        "Thumbnail": {
+                          "type": "string"
+                        },
+                        "Featured": {
+                          "type": "boolean"
+                        },
+                        "Content": {
+                          "type": "string"
+                        },
+                        "ThumbnailBgColorHex": {
+                          "type": "string"
+                        },
+                        "Slug": {
+                          "type": "string"
+                        },
+                        "TitleColor": {
+                          "type": "string"
+                        },
+                        "LinkToResource": {
+                          "type": "component"
+                        },
+                        "PostSEO": {
+                          "type": "component"
+                        },
+                        "Tags": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "categories": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "Publication": {
+                          "type": "string"
+                        },
+                        "published_at": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                }
+              ]
+            }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
+      "Bio-posts": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "Post": {
+            "required": [
+              "id",
+              "Title",
+              "Slug",
+              "PostSEO",
+              "Publication"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "Title": {
+                "type": "string"
+              },
+              "Publisher": {
+                "type": "string"
+              },
+              "Thumbnail": {
+                "type": "string"
+              },
+              "Featured": {
+                "type": "boolean"
+              },
+              "Content": {
+                "type": "string"
+              },
+              "ThumbnailBgColorHex": {
+                "type": "string"
+              },
+              "Slug": {
+                "type": "string"
+              },
+              "TitleColor": {
+                "type": "string"
+              },
+              "LinkToResource": {
+                "type": "component"
+              },
+              "PostSEO": {
+                "type": "component"
+              },
+              "Tags": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "categories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "Publication": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewBio-posts": {
+        "properties": {
+          "Post": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
       "Blog": {
         "required": [
           "id",
           "Title",
-          "Thumbnail",
-          "Published",
-          "Slug"
+          "Slug",
+          "PostSEO",
+          "Publication"
         ],
         "properties": {
           "id": {
@@ -5352,7 +8256,6 @@
             "required": [
               "id",
               "username",
-              "email",
               "fullname"
             ],
             "properties": {
@@ -5394,6 +8297,9 @@
               },
               "ProfilePicture": {
                 "type": "string"
+              },
+              "ContactInfo": {
+                "type": "component"
               },
               "created_by": {
                 "type": "string"
@@ -5471,11 +8377,8 @@
             }
           },
           "Featured": {
-            "type": "boolean"
-          },
-          "Published": {
-            "type": "string",
-            "format": "date-time"
+            "type": "boolean",
+            "default": false
           },
           "Content": {
             "type": "string"
@@ -5535,6 +8438,9 @@
                   "Title": {
                     "type": "string"
                   },
+                  "PostSEO": {
+                    "type": "component"
+                  },
                   "published_at": {
                     "type": "string"
                   },
@@ -5547,6 +8453,290 @@
                 }
               }
             }
+          },
+          "PostSEO": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "GoogleSEO": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "Title"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 350
+                  }
+                }
+              },
+              "FacebookSEO": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Url": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 350
+                  },
+                  "Image": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "SiteName": {
+                    "type": "string"
+                  }
+                }
+              },
+              "TwitterSEO": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 350
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Site": {
+                    "type": "string"
+                  },
+                  "Image": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "Creator": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "Tags": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "Name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "Name": {
+                  "type": "string"
+                },
+                "Description": {
+                  "type": "string"
+                },
+                "Slug": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "Name",
+                "Slug"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "Name": {
+                  "type": "string"
+                },
+                "Description": {
+                  "type": "string"
+                },
+                "Slug": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "Publication": {
+            "type": "string",
+            "format": "date"
           },
           "published_at": {
             "type": "string",
@@ -5557,8 +8747,9 @@
       "NewBlog": {
         "required": [
           "Title",
-          "Published",
-          "Slug"
+          "Slug",
+          "PostSEO",
+          "Publication"
         ],
         "properties": {
           "Title": {
@@ -5568,11 +8759,8 @@
             "type": "string"
           },
           "Featured": {
-            "type": "boolean"
-          },
-          "Published": {
-            "type": "string",
-            "format": "date-time"
+            "type": "boolean",
+            "default": false
           },
           "Content": {
             "type": "string"
@@ -5632,6 +8820,9 @@
                   "Title": {
                     "type": "string"
                   },
+                  "PostSEO": {
+                    "type": "component"
+                  },
                   "published_at": {
                     "type": "string"
                   },
@@ -5644,6 +8835,237 @@
                 }
               }
             }
+          },
+          "PostSEO": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "GoogleSEO": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "Title"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 350
+                  }
+                }
+              },
+              "FacebookSEO": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Url": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 350
+                  },
+                  "Image": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "SiteName": {
+                    "type": "string"
+                  }
+                }
+              },
+              "TwitterSEO": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 350
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Site": {
+                    "type": "string"
+                  },
+                  "Image": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "Creator": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "Tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "Publication": {
+            "type": "string",
+            "format": "date"
           },
           "published_at": {
             "type": "string",
@@ -5701,7 +9123,7 @@
                           "id",
                           "Title",
                           "Slug",
-                          "PageSEO"
+                          "PostSEO"
                         ],
                         "properties": {
                           "id": {
@@ -5710,16 +9132,16 @@
                           "Title": {
                             "type": "string"
                           },
+                          "Slug": {
+                            "type": "string"
+                          },
                           "Body": {
                             "type": "dynamiczone"
-                          },
-                          "Slug": {
-                            "type": "uid"
                           },
                           "Parent": {
                             "type": "string"
                           },
-                          "PageSEO": {
+                          "PostSEO": {
                             "type": "component"
                           },
                           "published_at": {
@@ -5767,39 +9189,11 @@
                 "items": {
                   "type": "object",
                   "required": [
-                    "id",
-                    "Icon"
+                    "id"
                   ],
                   "properties": {
                     "id": {
                       "type": "string"
-                    },
-                    "Social": {
-                      "required": [
-                        "id",
-                        "Label",
-                        "Link"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "Label": {
-                          "type": "string"
-                        },
-                        "Link": {
-                          "type": "string"
-                        },
-                        "published_at": {
-                          "type": "string"
-                        },
-                        "created_by": {
-                          "type": "string"
-                        },
-                        "updated_by": {
-                          "type": "string"
-                        }
-                      }
                     },
                     "Icon": {
                       "required": [
@@ -5858,6 +9252,33 @@
                           "type": "object"
                         },
                         "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Social": {
+                      "required": [
+                        "id",
+                        "Label",
+                        "Link"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "Label": {
+                          "type": "string"
+                        },
+                        "Link": {
+                          "type": "string"
+                        },
+                        "published_at": {
                           "type": "string"
                         },
                         "created_by": {
@@ -5917,7 +9338,7 @@
                           "id",
                           "Title",
                           "Slug",
-                          "PageSEO"
+                          "PostSEO"
                         ],
                         "properties": {
                           "id": {
@@ -5926,16 +9347,16 @@
                           "Title": {
                             "type": "string"
                           },
+                          "Slug": {
+                            "type": "string"
+                          },
                           "Body": {
                             "type": "dynamiczone"
-                          },
-                          "Slug": {
-                            "type": "uid"
                           },
                           "Parent": {
                             "type": "string"
                           },
-                          "PageSEO": {
+                          "PostSEO": {
                             "type": "component"
                           },
                           "published_at": {
@@ -5983,39 +9404,11 @@
                 "items": {
                   "type": "object",
                   "required": [
-                    "id",
-                    "Icon"
+                    "id"
                   ],
                   "properties": {
                     "id": {
                       "type": "string"
-                    },
-                    "Social": {
-                      "required": [
-                        "id",
-                        "Label",
-                        "Link"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "Label": {
-                          "type": "string"
-                        },
-                        "Link": {
-                          "type": "string"
-                        },
-                        "published_at": {
-                          "type": "string"
-                        },
-                        "created_by": {
-                          "type": "string"
-                        },
-                        "updated_by": {
-                          "type": "string"
-                        }
-                      }
                     },
                     "Icon": {
                       "required": [
@@ -6083,7 +9476,288 @@
                           "type": "string"
                         }
                       }
+                    },
+                    "Social": {
+                      "required": [
+                        "id",
+                        "Label",
+                        "Link"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "Label": {
+                          "type": "string"
+                        },
+                        "Link": {
+                          "type": "string"
+                        },
+                        "published_at": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
                     }
+                  }
+                }
+              }
+            }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
+      "Forms": {
+        "required": [
+          "id",
+          "Name",
+          "LegalConsent",
+          "SubmitButtonText",
+          "HubSpotInfo"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "LegalConsent": {
+            "type": "object",
+            "required": [
+              "id",
+              "ConsentText"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "ConsentText": {
+                "type": "string"
+              }
+            }
+          },
+          "SubmitButtonText": {
+            "type": "string",
+            "default": "Talk to Us!"
+          },
+          "Notice": {
+            "type": "string"
+          },
+          "Text": {
+            "type": "string"
+          },
+          "HubSpotInfo": {
+            "type": "object",
+            "required": [
+              "id",
+              "PortalId",
+              "FormId"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "PortalId": {
+                "type": "string",
+                "default": "3344191"
+              },
+              "FormId": {
+                "type": "string"
+              }
+            }
+          },
+          "Fields": {
+            "type": "object",
+            "required": [
+              "id",
+              "LastName"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "FirstName": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "Label",
+                  "Required",
+                  "Enable",
+                  "HtmlName"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Label": {
+                    "type": "string",
+                    "default": "Name"
+                  },
+                  "Required": {
+                    "type": "boolean",
+                    "default": true
+                  },
+                  "Placeholder": {
+                    "type": "string"
+                  },
+                  "Enable": {
+                    "type": "boolean",
+                    "default": true
+                  },
+                  "HtmlName": {
+                    "type": "string",
+                    "default": "firstname"
+                  }
+                }
+              },
+              "LastName": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Label": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewForms": {
+        "required": [
+          "Name",
+          "LegalConsent",
+          "SubmitButtonText",
+          "HubSpotInfo"
+        ],
+        "properties": {
+          "Name": {
+            "type": "string"
+          },
+          "LegalConsent": {
+            "type": "object",
+            "required": [
+              "id",
+              "ConsentText"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "ConsentText": {
+                "type": "string"
+              }
+            }
+          },
+          "SubmitButtonText": {
+            "type": "string",
+            "default": "Talk to Us!"
+          },
+          "Notice": {
+            "type": "string"
+          },
+          "Text": {
+            "type": "string"
+          },
+          "HubSpotInfo": {
+            "type": "object",
+            "required": [
+              "id",
+              "PortalId",
+              "FormId"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "PortalId": {
+                "type": "string",
+                "default": "3344191"
+              },
+              "FormId": {
+                "type": "string"
+              }
+            }
+          },
+          "Fields": {
+            "type": "object",
+            "required": [
+              "id",
+              "LastName"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "FirstName": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "Label",
+                  "Required",
+                  "Enable",
+                  "HtmlName"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Label": {
+                    "type": "string",
+                    "default": "Name"
+                  },
+                  "Required": {
+                    "type": "boolean",
+                    "default": true
+                  },
+                  "Placeholder": {
+                    "type": "string"
+                  },
+                  "Enable": {
+                    "type": "boolean",
+                    "default": true
+                  },
+                  "HtmlName": {
+                    "type": "string",
+                    "default": "firstname"
+                  }
+                }
+              },
+              "LastName": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Label": {
+                    "type": "string"
                   }
                 }
               }
@@ -6130,7 +9804,7 @@
                     "id",
                     "Title",
                     "Slug",
-                    "PageSEO"
+                    "PostSEO"
                   ],
                   "properties": {
                     "id": {
@@ -6139,16 +9813,16 @@
                     "Title": {
                       "type": "string"
                     },
+                    "Slug": {
+                      "type": "string"
+                    },
                     "Body": {
                       "type": "dynamiczone"
-                    },
-                    "Slug": {
-                      "type": "uid"
                     },
                     "Parent": {
                       "type": "string"
                     },
-                    "PageSEO": {
+                    "PostSEO": {
                       "type": "component"
                     },
                     "published_at": {
@@ -6197,7 +9871,7 @@
                                 "id",
                                 "Title",
                                 "Slug",
-                                "PageSEO"
+                                "PostSEO"
                               ],
                               "properties": {
                                 "id": {
@@ -6206,16 +9880,16 @@
                                 "Title": {
                                   "type": "string"
                                 },
+                                "Slug": {
+                                  "type": "string"
+                                },
                                 "Body": {
                                   "type": "dynamiczone"
-                                },
-                                "Slug": {
-                                  "type": "uid"
                                 },
                                 "Parent": {
                                   "type": "string"
                                 },
-                                "PageSEO": {
+                                "PostSEO": {
                                   "type": "component"
                                 },
                                 "published_at": {
@@ -6289,7 +9963,7 @@
                     "id",
                     "Title",
                     "Slug",
-                    "PageSEO"
+                    "PostSEO"
                   ],
                   "properties": {
                     "id": {
@@ -6298,16 +9972,16 @@
                     "Title": {
                       "type": "string"
                     },
+                    "Slug": {
+                      "type": "string"
+                    },
                     "Body": {
                       "type": "dynamiczone"
-                    },
-                    "Slug": {
-                      "type": "uid"
                     },
                     "Parent": {
                       "type": "string"
                     },
-                    "PageSEO": {
+                    "PostSEO": {
                       "type": "component"
                     },
                     "published_at": {
@@ -6356,7 +10030,7 @@
                                 "id",
                                 "Title",
                                 "Slug",
-                                "PageSEO"
+                                "PostSEO"
                               ],
                               "properties": {
                                 "id": {
@@ -6365,16 +10039,16 @@
                                 "Title": {
                                   "type": "string"
                                 },
+                                "Slug": {
+                                  "type": "string"
+                                },
                                 "Body": {
                                   "type": "dynamiczone"
-                                },
-                                "Slug": {
-                                  "type": "uid"
                                 },
                                 "Parent": {
                                   "type": "string"
                                 },
-                                "PageSEO": {
+                                "PostSEO": {
                                   "type": "component"
                                 },
                                 "published_at": {
@@ -6436,13 +10110,16 @@
           "id",
           "Title",
           "Slug",
-          "PageSEO"
+          "PostSEO"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
           "Title": {
+            "type": "string"
+          },
+          "Slug": {
             "type": "string"
           },
           "Body": {
@@ -6457,11 +10134,11 @@
                         "blog.blog-nav",
                         "blog.featured-post-slider",
                         "blog.all-blog-posts",
-                        "universal.small-header",
-                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
-                        "tutorials.all-tutorials",
+                        "universal.image-header",
+                        "universal.white-papers-and-ebooks-list",
+                        "tutorials.tutorials-list",
                         "universal.text-header",
-                        "videos.all-videos",
+                        "videos.video-list",
                         "faqs.faq-accordion",
                         "universal.accordion",
                         "universal.card-grid-thumbnail-and-icon"
@@ -6494,7 +10171,8 @@
                     }
                   },
                   "required": [
-                    "id"
+                    "id",
+                    "BlogNavItem"
                   ]
                 },
                 {
@@ -6505,11 +10183,11 @@
                         "blog.blog-nav",
                         "blog.featured-post-slider",
                         "blog.all-blog-posts",
-                        "universal.small-header",
-                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
-                        "tutorials.all-tutorials",
+                        "universal.image-header",
+                        "universal.white-papers-and-ebooks-list",
+                        "tutorials.tutorials-list",
                         "universal.text-header",
-                        "videos.all-videos",
+                        "videos.video-list",
                         "faqs.faq-accordion",
                         "universal.accordion",
                         "universal.card-grid-thumbnail-and-icon"
@@ -6534,11 +10212,11 @@
                         "blog.blog-nav",
                         "blog.featured-post-slider",
                         "blog.all-blog-posts",
-                        "universal.small-header",
-                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
-                        "tutorials.all-tutorials",
+                        "universal.image-header",
+                        "universal.white-papers-and-ebooks-list",
+                        "tutorials.tutorials-list",
                         "universal.text-header",
-                        "videos.all-videos",
+                        "videos.video-list",
                         "faqs.faq-accordion",
                         "universal.accordion",
                         "universal.card-grid-thumbnail-and-icon"
@@ -6563,11 +10241,11 @@
                         "blog.blog-nav",
                         "blog.featured-post-slider",
                         "blog.all-blog-posts",
-                        "universal.small-header",
-                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
-                        "tutorials.all-tutorials",
+                        "universal.image-header",
+                        "universal.white-papers-and-ebooks-list",
+                        "tutorials.tutorials-list",
                         "universal.text-header",
-                        "videos.all-videos",
+                        "videos.video-list",
                         "faqs.faq-accordion",
                         "universal.accordion",
                         "universal.card-grid-thumbnail-and-icon"
@@ -6687,11 +10365,11 @@
                         "blog.blog-nav",
                         "blog.featured-post-slider",
                         "blog.all-blog-posts",
-                        "universal.small-header",
-                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
-                        "tutorials.all-tutorials",
+                        "universal.image-header",
+                        "universal.white-papers-and-ebooks-list",
+                        "tutorials.tutorials-list",
                         "universal.text-header",
-                        "videos.all-videos",
+                        "videos.video-list",
                         "faqs.faq-accordion",
                         "universal.accordion",
                         "universal.card-grid-thumbnail-and-icon"
@@ -6700,7 +10378,7 @@
                     "id": {
                       "type": "string"
                     },
-                    "ResourceLink": {
+                    "Link": {
                       "type": "array",
                       "items": {
                         "type": "object",
@@ -6711,7 +10389,7 @@
                           "id": {
                             "type": "string"
                           },
-                          "Resource": {
+                          "whitepapers_and_ebook": {
                             "required": [
                               "id",
                               "HeaderTitle",
@@ -6745,6 +10423,9 @@
                               "Title": {
                                 "type": "string"
                               },
+                              "PostSEO": {
+                                "type": "component"
+                              },
                               "published_at": {
                                 "type": "string"
                               },
@@ -6761,7 +10442,8 @@
                     }
                   },
                   "required": [
-                    "id"
+                    "id",
+                    "Link"
                   ]
                 },
                 {
@@ -6772,11 +10454,11 @@
                         "blog.blog-nav",
                         "blog.featured-post-slider",
                         "blog.all-blog-posts",
-                        "universal.small-header",
-                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
-                        "tutorials.all-tutorials",
+                        "universal.image-header",
+                        "universal.white-papers-and-ebooks-list",
+                        "tutorials.tutorials-list",
                         "universal.text-header",
-                        "videos.all-videos",
+                        "videos.video-list",
                         "faqs.faq-accordion",
                         "universal.accordion",
                         "universal.card-grid-thumbnail-and-icon"
@@ -6787,6 +10469,14 @@
                     },
                     "MaxPosts": {
                       "type": "integer"
+                    },
+                    "Order": {
+                      "type": "string",
+                      "default": "Random",
+                      "enum": [
+                        "Random",
+                        "Date"
+                      ]
                     }
                   },
                   "required": [
@@ -6801,11 +10491,11 @@
                         "blog.blog-nav",
                         "blog.featured-post-slider",
                         "blog.all-blog-posts",
-                        "universal.small-header",
-                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
-                        "tutorials.all-tutorials",
+                        "universal.image-header",
+                        "universal.white-papers-and-ebooks-list",
+                        "tutorials.tutorials-list",
                         "universal.text-header",
-                        "videos.all-videos",
+                        "videos.video-list",
                         "faqs.faq-accordion",
                         "universal.accordion",
                         "universal.card-grid-thumbnail-and-icon"
@@ -6878,11 +10568,11 @@
                         "blog.blog-nav",
                         "blog.featured-post-slider",
                         "blog.all-blog-posts",
-                        "universal.small-header",
-                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
-                        "tutorials.all-tutorials",
+                        "universal.image-header",
+                        "universal.white-papers-and-ebooks-list",
+                        "tutorials.tutorials-list",
                         "universal.text-header",
-                        "videos.all-videos",
+                        "videos.video-list",
                         "faqs.faq-accordion",
                         "universal.accordion",
                         "universal.card-grid-thumbnail-and-icon"
@@ -6934,11 +10624,11 @@
                         "blog.blog-nav",
                         "blog.featured-post-slider",
                         "blog.all-blog-posts",
-                        "universal.small-header",
-                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
-                        "tutorials.all-tutorials",
+                        "universal.image-header",
+                        "universal.white-papers-and-ebooks-list",
+                        "tutorials.tutorials-list",
                         "universal.text-header",
-                        "videos.all-videos",
+                        "videos.video-list",
                         "faqs.faq-accordion",
                         "universal.accordion",
                         "universal.card-grid-thumbnail-and-icon"
@@ -6949,7 +10639,7 @@
                     },
                     "AllowSearchBar": {
                       "type": "boolean",
-                      "default": true
+                      "default": false
                     },
                     "Accordion": {
                       "type": "array",
@@ -7070,11 +10760,11 @@
                         "blog.blog-nav",
                         "blog.featured-post-slider",
                         "blog.all-blog-posts",
-                        "universal.small-header",
-                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
-                        "tutorials.all-tutorials",
+                        "universal.image-header",
+                        "universal.white-papers-and-ebooks-list",
+                        "tutorials.tutorials-list",
                         "universal.text-header",
-                        "videos.all-videos",
+                        "videos.video-list",
                         "faqs.faq-accordion",
                         "universal.accordion",
                         "universal.card-grid-thumbnail-and-icon"
@@ -7188,11 +10878,11 @@
                         "blog.blog-nav",
                         "blog.featured-post-slider",
                         "blog.all-blog-posts",
-                        "universal.small-header",
-                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
-                        "tutorials.all-tutorials",
+                        "universal.image-header",
+                        "universal.white-papers-and-ebooks-list",
+                        "tutorials.tutorials-list",
                         "universal.text-header",
-                        "videos.all-videos",
+                        "videos.video-list",
                         "faqs.faq-accordion",
                         "universal.accordion",
                         "universal.card-grid-thumbnail-and-icon"
@@ -7201,7 +10891,7 @@
                     "id": {
                       "type": "string"
                     },
-                    "CardGridTIItem": {
+                    "CardGridItem": {
                       "type": "array",
                       "items": {
                         "type": "object",
@@ -7290,7 +10980,7 @@
                               "id",
                               "Title",
                               "Slug",
-                              "PageSEO"
+                              "PostSEO"
                             ],
                             "properties": {
                               "id": {
@@ -7299,16 +10989,16 @@
                               "Title": {
                                 "type": "string"
                               },
+                              "Slug": {
+                                "type": "string"
+                              },
                               "Body": {
                                 "type": "dynamiczone"
-                              },
-                              "Slug": {
-                                "type": "uid"
                               },
                               "Parent": {
                                 "type": "string"
                               },
-                              "PageSEO": {
+                              "PostSEO": {
                                 "type": "component"
                               },
                               "published_at": {
@@ -7339,21 +11029,18 @@
                   },
                   "required": [
                     "id",
-                    "CardGridTIItem"
+                    "CardGridItem"
                   ]
                 }
               ]
             }
-          },
-          "Slug": {
-            "type": "uid"
           },
           "Parent": {
             "required": [
               "id",
               "Title",
               "Slug",
-              "PageSEO"
+              "PostSEO"
             ],
             "properties": {
               "id": {
@@ -7362,16 +11049,16 @@
               "Title": {
                 "type": "string"
               },
+              "Slug": {
+                "type": "string"
+              },
               "Body": {
                 "type": "dynamiczone"
-              },
-              "Slug": {
-                "type": "uid"
               },
               "Parent": {
                 "type": "string"
               },
-              "PageSEO": {
+              "PostSEO": {
                 "type": "component"
               },
               "published_at": {
@@ -7385,12 +11072,10 @@
               }
             }
           },
-          "PageSEO": {
+          "PostSEO": {
             "type": "object",
             "required": [
-              "id",
-              "GoogleSEO",
-              "TwitterSeo"
+              "id"
             ],
             "properties": {
               "id": {
@@ -7408,15 +11093,15 @@
                   },
                   "Title": {
                     "type": "string",
-                    "maxLength": 70
+                    "maxLength": 170
                   },
                   "Description": {
                     "type": "string",
-                    "maxLength": 170
+                    "maxLength": 350
                   }
                 }
               },
-              "FacebookSeo": {
+              "FacebookSEO": {
                 "type": "object",
                 "required": [
                   "id"
@@ -7434,7 +11119,7 @@
                   },
                   "Description": {
                     "type": "string",
-                    "maxLength": 170
+                    "maxLength": 350
                   },
                   "Image": {
                     "required": [
@@ -7508,7 +11193,7 @@
                   }
                 }
               },
-              "TwitterSeo": {
+              "TwitterSEO": {
                 "type": "object",
                 "required": [
                   "id"
@@ -7519,7 +11204,7 @@
                   },
                   "Description": {
                     "type": "string",
-                    "maxLength": 170
+                    "maxLength": 350
                   },
                   "Title": {
                     "type": "string",
@@ -7612,10 +11297,13 @@
         "required": [
           "Title",
           "Slug",
-          "PageSEO"
+          "PostSEO"
         ],
         "properties": {
           "Title": {
+            "type": "string"
+          },
+          "Slug": {
             "type": "string"
           },
           "Body": {
@@ -7630,11 +11318,11 @@
                         "blog.blog-nav",
                         "blog.featured-post-slider",
                         "blog.all-blog-posts",
-                        "universal.small-header",
-                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
-                        "tutorials.all-tutorials",
+                        "universal.image-header",
+                        "universal.white-papers-and-ebooks-list",
+                        "tutorials.tutorials-list",
                         "universal.text-header",
-                        "videos.all-videos",
+                        "videos.video-list",
                         "faqs.faq-accordion",
                         "universal.accordion",
                         "universal.card-grid-thumbnail-and-icon"
@@ -7667,7 +11355,8 @@
                     }
                   },
                   "required": [
-                    "id"
+                    "id",
+                    "BlogNavItem"
                   ]
                 },
                 {
@@ -7678,11 +11367,11 @@
                         "blog.blog-nav",
                         "blog.featured-post-slider",
                         "blog.all-blog-posts",
-                        "universal.small-header",
-                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
-                        "tutorials.all-tutorials",
+                        "universal.image-header",
+                        "universal.white-papers-and-ebooks-list",
+                        "tutorials.tutorials-list",
                         "universal.text-header",
-                        "videos.all-videos",
+                        "videos.video-list",
                         "faqs.faq-accordion",
                         "universal.accordion",
                         "universal.card-grid-thumbnail-and-icon"
@@ -7707,11 +11396,11 @@
                         "blog.blog-nav",
                         "blog.featured-post-slider",
                         "blog.all-blog-posts",
-                        "universal.small-header",
-                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
-                        "tutorials.all-tutorials",
+                        "universal.image-header",
+                        "universal.white-papers-and-ebooks-list",
+                        "tutorials.tutorials-list",
                         "universal.text-header",
-                        "videos.all-videos",
+                        "videos.video-list",
                         "faqs.faq-accordion",
                         "universal.accordion",
                         "universal.card-grid-thumbnail-and-icon"
@@ -7736,11 +11425,11 @@
                         "blog.blog-nav",
                         "blog.featured-post-slider",
                         "blog.all-blog-posts",
-                        "universal.small-header",
-                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
-                        "tutorials.all-tutorials",
+                        "universal.image-header",
+                        "universal.white-papers-and-ebooks-list",
+                        "tutorials.tutorials-list",
                         "universal.text-header",
-                        "videos.all-videos",
+                        "videos.video-list",
                         "faqs.faq-accordion",
                         "universal.accordion",
                         "universal.card-grid-thumbnail-and-icon"
@@ -7860,11 +11549,11 @@
                         "blog.blog-nav",
                         "blog.featured-post-slider",
                         "blog.all-blog-posts",
-                        "universal.small-header",
-                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
-                        "tutorials.all-tutorials",
+                        "universal.image-header",
+                        "universal.white-papers-and-ebooks-list",
+                        "tutorials.tutorials-list",
                         "universal.text-header",
-                        "videos.all-videos",
+                        "videos.video-list",
                         "faqs.faq-accordion",
                         "universal.accordion",
                         "universal.card-grid-thumbnail-and-icon"
@@ -7873,7 +11562,7 @@
                     "id": {
                       "type": "string"
                     },
-                    "ResourceLink": {
+                    "Link": {
                       "type": "array",
                       "items": {
                         "type": "object",
@@ -7884,7 +11573,7 @@
                           "id": {
                             "type": "string"
                           },
-                          "Resource": {
+                          "whitepapers_and_ebook": {
                             "required": [
                               "id",
                               "HeaderTitle",
@@ -7918,6 +11607,9 @@
                               "Title": {
                                 "type": "string"
                               },
+                              "PostSEO": {
+                                "type": "component"
+                              },
                               "published_at": {
                                 "type": "string"
                               },
@@ -7934,7 +11626,8 @@
                     }
                   },
                   "required": [
-                    "id"
+                    "id",
+                    "Link"
                   ]
                 },
                 {
@@ -7945,11 +11638,11 @@
                         "blog.blog-nav",
                         "blog.featured-post-slider",
                         "blog.all-blog-posts",
-                        "universal.small-header",
-                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
-                        "tutorials.all-tutorials",
+                        "universal.image-header",
+                        "universal.white-papers-and-ebooks-list",
+                        "tutorials.tutorials-list",
                         "universal.text-header",
-                        "videos.all-videos",
+                        "videos.video-list",
                         "faqs.faq-accordion",
                         "universal.accordion",
                         "universal.card-grid-thumbnail-and-icon"
@@ -7960,6 +11653,14 @@
                     },
                     "MaxPosts": {
                       "type": "integer"
+                    },
+                    "Order": {
+                      "type": "string",
+                      "default": "Random",
+                      "enum": [
+                        "Random",
+                        "Date"
+                      ]
                     }
                   },
                   "required": [
@@ -7974,11 +11675,11 @@
                         "blog.blog-nav",
                         "blog.featured-post-slider",
                         "blog.all-blog-posts",
-                        "universal.small-header",
-                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
-                        "tutorials.all-tutorials",
+                        "universal.image-header",
+                        "universal.white-papers-and-ebooks-list",
+                        "tutorials.tutorials-list",
                         "universal.text-header",
-                        "videos.all-videos",
+                        "videos.video-list",
                         "faqs.faq-accordion",
                         "universal.accordion",
                         "universal.card-grid-thumbnail-and-icon"
@@ -8051,11 +11752,11 @@
                         "blog.blog-nav",
                         "blog.featured-post-slider",
                         "blog.all-blog-posts",
-                        "universal.small-header",
-                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
-                        "tutorials.all-tutorials",
+                        "universal.image-header",
+                        "universal.white-papers-and-ebooks-list",
+                        "tutorials.tutorials-list",
                         "universal.text-header",
-                        "videos.all-videos",
+                        "videos.video-list",
                         "faqs.faq-accordion",
                         "universal.accordion",
                         "universal.card-grid-thumbnail-and-icon"
@@ -8107,11 +11808,11 @@
                         "blog.blog-nav",
                         "blog.featured-post-slider",
                         "blog.all-blog-posts",
-                        "universal.small-header",
-                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
-                        "tutorials.all-tutorials",
+                        "universal.image-header",
+                        "universal.white-papers-and-ebooks-list",
+                        "tutorials.tutorials-list",
                         "universal.text-header",
-                        "videos.all-videos",
+                        "videos.video-list",
                         "faqs.faq-accordion",
                         "universal.accordion",
                         "universal.card-grid-thumbnail-and-icon"
@@ -8122,7 +11823,7 @@
                     },
                     "AllowSearchBar": {
                       "type": "boolean",
-                      "default": true
+                      "default": false
                     },
                     "Accordion": {
                       "type": "array",
@@ -8243,11 +11944,11 @@
                         "blog.blog-nav",
                         "blog.featured-post-slider",
                         "blog.all-blog-posts",
-                        "universal.small-header",
-                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
-                        "tutorials.all-tutorials",
+                        "universal.image-header",
+                        "universal.white-papers-and-ebooks-list",
+                        "tutorials.tutorials-list",
                         "universal.text-header",
-                        "videos.all-videos",
+                        "videos.video-list",
                         "faqs.faq-accordion",
                         "universal.accordion",
                         "universal.card-grid-thumbnail-and-icon"
@@ -8361,11 +12062,11 @@
                         "blog.blog-nav",
                         "blog.featured-post-slider",
                         "blog.all-blog-posts",
-                        "universal.small-header",
-                        "whitepapers-ebooks.all-whitepapers-and-ebooks",
-                        "tutorials.all-tutorials",
+                        "universal.image-header",
+                        "universal.white-papers-and-ebooks-list",
+                        "tutorials.tutorials-list",
                         "universal.text-header",
-                        "videos.all-videos",
+                        "videos.video-list",
                         "faqs.faq-accordion",
                         "universal.accordion",
                         "universal.card-grid-thumbnail-and-icon"
@@ -8374,7 +12075,7 @@
                     "id": {
                       "type": "string"
                     },
-                    "CardGridTIItem": {
+                    "CardGridItem": {
                       "type": "array",
                       "items": {
                         "type": "object",
@@ -8463,7 +12164,7 @@
                               "id",
                               "Title",
                               "Slug",
-                              "PageSEO"
+                              "PostSEO"
                             ],
                             "properties": {
                               "id": {
@@ -8472,16 +12173,16 @@
                               "Title": {
                                 "type": "string"
                               },
+                              "Slug": {
+                                "type": "string"
+                              },
                               "Body": {
                                 "type": "dynamiczone"
-                              },
-                              "Slug": {
-                                "type": "uid"
                               },
                               "Parent": {
                                 "type": "string"
                               },
-                              "PageSEO": {
+                              "PostSEO": {
                                 "type": "component"
                               },
                               "published_at": {
@@ -8512,24 +12213,19 @@
                   },
                   "required": [
                     "id",
-                    "CardGridTIItem"
+                    "CardGridItem"
                   ]
                 }
               ]
             }
           },
-          "Slug": {
-            "type": "uid"
-          },
           "Parent": {
             "type": "string"
           },
-          "PageSEO": {
+          "PostSEO": {
             "type": "object",
             "required": [
-              "id",
-              "GoogleSEO",
-              "TwitterSeo"
+              "id"
             ],
             "properties": {
               "id": {
@@ -8547,15 +12243,15 @@
                   },
                   "Title": {
                     "type": "string",
-                    "maxLength": 70
+                    "maxLength": 170
                   },
                   "Description": {
                     "type": "string",
-                    "maxLength": 170
+                    "maxLength": 350
                   }
                 }
               },
-              "FacebookSeo": {
+              "FacebookSEO": {
                 "type": "object",
                 "required": [
                   "id"
@@ -8573,7 +12269,7 @@
                   },
                   "Description": {
                     "type": "string",
-                    "maxLength": 170
+                    "maxLength": 350
                   },
                   "Image": {
                     "required": [
@@ -8647,7 +12343,7 @@
                   }
                 }
               },
-              "TwitterSeo": {
+              "TwitterSEO": {
                 "type": "object",
                 "required": [
                   "id"
@@ -8658,7 +12354,7 @@
                   },
                   "Description": {
                     "type": "string",
-                    "maxLength": 170
+                    "maxLength": 350
                   },
                   "Title": {
                     "type": "string",
@@ -8753,6 +12449,60 @@
           }
         }
       },
+      "Post-categories": {
+        "required": [
+          "id",
+          "Name",
+          "Slug"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "Description": {
+            "type": "string",
+            "maxLength": 170
+          },
+          "Slug": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewPost-categories": {
+        "required": [
+          "Name",
+          "Slug"
+        ],
+        "properties": {
+          "Name": {
+            "type": "string"
+          },
+          "Description": {
+            "type": "string",
+            "maxLength": 170
+          },
+          "Slug": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
       "Social": {
         "required": [
           "id",
@@ -8799,12 +12549,65 @@
           }
         }
       },
+      "Tags": {
+        "required": [
+          "id",
+          "Name"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "Description": {
+            "type": "string",
+            "maxLength": 170
+          },
+          "Slug": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewTags": {
+        "required": [
+          "Name"
+        ],
+        "properties": {
+          "Name": {
+            "type": "string"
+          },
+          "Description": {
+            "type": "string",
+            "maxLength": 170
+          },
+          "Slug": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
       "Tutorials": {
         "required": [
           "id",
           "Title",
           "Slug",
-          "Content"
+          "Content",
+          "PostSEO"
         ],
         "properties": {
           "id": {
@@ -8820,7 +12623,6 @@
             "required": [
               "id",
               "username",
-              "email",
               "fullname"
             ],
             "properties": {
@@ -8862,6 +12664,9 @@
               },
               "ProfilePicture": {
                 "type": "string"
+              },
+              "ContactInfo": {
+                "type": "component"
               },
               "created_by": {
                 "type": "string"
@@ -8938,10 +12743,6 @@
               }
             }
           },
-          "Published": {
-            "type": "string",
-            "format": "date-time"
-          },
           "Content": {
             "type": "string"
           },
@@ -8950,6 +12751,283 @@
           },
           "TitleColor": {
             "type": "string"
+          },
+          "PostSEO": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "GoogleSEO": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "Title"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 350
+                  }
+                }
+              },
+              "FacebookSEO": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Url": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 350
+                  },
+                  "Image": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "SiteName": {
+                    "type": "string"
+                  }
+                }
+              },
+              "TwitterSEO": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 350
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Site": {
+                    "type": "string"
+                  },
+                  "Image": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "Creator": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "LinkToResource": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "Description": {
+                "type": "string"
+              },
+              "Resource": {
+                "required": [
+                  "id",
+                  "HeaderTitle",
+                  "Slug",
+                  "Thumbnail",
+                  "BookCover",
+                  "Title"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "HeaderTitle": {
+                    "type": "string"
+                  },
+                  "Subtitle": {
+                    "type": "string"
+                  },
+                  "Slug": {
+                    "type": "string"
+                  },
+                  "Thumbnail": {
+                    "type": "string"
+                  },
+                  "BookCover": {
+                    "type": "string"
+                  },
+                  "Content": {
+                    "type": "string"
+                  },
+                  "Title": {
+                    "type": "string"
+                  },
+                  "PostSEO": {
+                    "type": "component"
+                  },
+                  "published_at": {
+                    "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
           },
           "published_at": {
             "type": "string",
@@ -8961,7 +13039,8 @@
         "required": [
           "Title",
           "Slug",
-          "Content"
+          "Content",
+          "PostSEO"
         ],
         "properties": {
           "Title": {
@@ -8973,10 +13052,6 @@
           "Publisher": {
             "type": "string"
           },
-          "Published": {
-            "type": "string",
-            "format": "date-time"
-          },
           "Content": {
             "type": "string"
           },
@@ -8985,6 +13060,283 @@
           },
           "TitleColor": {
             "type": "string"
+          },
+          "PostSEO": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "GoogleSEO": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "Title"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 350
+                  }
+                }
+              },
+              "FacebookSEO": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Url": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 350
+                  },
+                  "Image": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "SiteName": {
+                    "type": "string"
+                  }
+                }
+              },
+              "TwitterSEO": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 350
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Site": {
+                    "type": "string"
+                  },
+                  "Image": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "Creator": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "LinkToResource": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "Description": {
+                "type": "string"
+              },
+              "Resource": {
+                "required": [
+                  "id",
+                  "HeaderTitle",
+                  "Slug",
+                  "Thumbnail",
+                  "BookCover",
+                  "Title"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "HeaderTitle": {
+                    "type": "string"
+                  },
+                  "Subtitle": {
+                    "type": "string"
+                  },
+                  "Slug": {
+                    "type": "string"
+                  },
+                  "Thumbnail": {
+                    "type": "string"
+                  },
+                  "BookCover": {
+                    "type": "string"
+                  },
+                  "Content": {
+                    "type": "string"
+                  },
+                  "Title": {
+                    "type": "string"
+                  },
+                  "PostSEO": {
+                    "type": "component"
+                  },
+                  "published_at": {
+                    "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
           },
           "published_at": {
             "type": "string",
@@ -9160,6 +13512,221 @@
           "Title": {
             "type": "string"
           },
+          "PostSEO": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "GoogleSEO": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "Title"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 350
+                  }
+                }
+              },
+              "FacebookSEO": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Url": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 350
+                  },
+                  "Image": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "SiteName": {
+                    "type": "string"
+                  }
+                }
+              },
+              "TwitterSEO": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 350
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Site": {
+                    "type": "string"
+                  },
+                  "Image": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "Creator": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -9187,6 +13754,221 @@
           },
           "Title": {
             "type": "string"
+          },
+          "PostSEO": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "GoogleSEO": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "Title"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 350
+                  }
+                }
+              },
+              "FacebookSEO": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Url": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 350
+                  },
+                  "Image": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "SiteName": {
+                    "type": "string"
+                  }
+                }
+              },
+              "TwitterSEO": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 350
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Site": {
+                    "type": "string"
+                  },
+                  "Image": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "Creator": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
           },
           "published_at": {
             "type": "string",
@@ -9266,7 +14048,6 @@
               "required": [
                 "id",
                 "username",
-                "email",
                 "fullname"
               ],
               "properties": {
@@ -9308,6 +14089,9 @@
                 },
                 "ProfilePicture": {
                   "type": "string"
+                },
+                "ContactInfo": {
+                  "type": "component"
                 },
                 "created_by": {
                   "type": "string"
@@ -9359,7 +14143,6 @@
         "required": [
           "id",
           "username",
-          "email",
           "fullname"
         ],
         "properties": {
@@ -9495,13 +14278,35 @@
                 "type": "string"
               }
             }
+          },
+          "ContactInfo": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "Website": {
+                "type": "string"
+              },
+              "FacebookURL": {
+                "type": "string"
+              },
+              "LinkedInURL": {
+                "type": "string"
+              },
+              "TwitterURL": {
+                "type": "string"
+              }
+            }
           }
         }
       },
       "NewUsersPermissionsUser": {
         "required": [
           "username",
-          "email",
           "fullname"
         ],
         "properties": {
@@ -9544,6 +14349,29 @@
           "description": {
             "type": "string"
           },
+          "ContactInfo": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "Website": {
+                "type": "string"
+              },
+              "FacebookURL": {
+                "type": "string"
+              },
+              "LinkedInURL": {
+                "type": "string"
+              },
+              "TwitterURL": {
+                "type": "string"
+              }
+            }
+          },
           "created_by": {
             "type": "string"
           },
@@ -9584,10 +14412,16 @@
       "name": "Footer"
     },
     {
+      "name": "Forms"
+    },
+    {
       "name": "Pages"
     },
     {
       "name": "Social"
+    },
+    {
+      "name": "Tags"
     },
     {
       "name": "Tutorials"

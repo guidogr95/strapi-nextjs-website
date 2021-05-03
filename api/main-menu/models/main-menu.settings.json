@@ -2,8 +2,7 @@
   "kind": "singleType",
   "collectionName": "main_menus",
   "info": {
-    "name": "Main Menu",
-    "description": ""
+    "name": "Main Menu"
   },
   "options": {
     "increments": true,

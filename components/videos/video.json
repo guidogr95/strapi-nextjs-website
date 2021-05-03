@@ -2,8 +2,7 @@
   "collectionName": "components_videos_videos",
   "info": {
     "name": "Video",
-    "icon": "grip-horizontal",
-    "description": ""
+    "icon": "file-video"
   },
   "options": {},
   "attributes": {

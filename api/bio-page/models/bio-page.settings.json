@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "bio_pages",
+  "info": {
+    "name": "Bio Page",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Posts": {
+      "type": "dynamiczone",
+      "components": [
+        "bio.tutorial",
+        "bio.blog"
+      ],
+      "required": true
+    }
+  }
+}

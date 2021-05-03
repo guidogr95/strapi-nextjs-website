@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_forms_legal_consents",
+  "info": {
+    "name": "Legal Consent",
+    "icon": "check"
+  },
+  "options": {},
+  "attributes": {
+    "ConsentText": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

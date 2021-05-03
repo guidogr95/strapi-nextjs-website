@@ -344,7 +344,7 @@
                     "id",
                     "Title",
                     "Slug",
-                    "PageSEO"
+                    "PostSEO"
                   ],
                   "properties": {
                     "id": {
@@ -353,16 +353,16 @@
                     "Title": {
                       "type": "string"
                     },
+                    "Slug": {
+                      "type": "string"
+                    },
                     "Body": {
                       "type": "dynamiczone"
-                    },
-                    "Slug": {
-                      "type": "uid"
                     },
                     "Parent": {
                       "type": "string"
                     },
-                    "PageSEO": {
+                    "PostSEO": {
                       "type": "component"
                     },
                     "published_at": {
@@ -411,7 +411,7 @@
                                 "id",
                                 "Title",
                                 "Slug",
-                                "PageSEO"
+                                "PostSEO"
                               ],
                               "properties": {
                                 "id": {
@@ -420,16 +420,16 @@
                                 "Title": {
                                   "type": "string"
                                 },
+                                "Slug": {
+                                  "type": "string"
+                                },
                                 "Body": {
                                   "type": "dynamiczone"
-                                },
-                                "Slug": {
-                                  "type": "uid"
                                 },
                                 "Parent": {
                                   "type": "string"
                                 },
-                                "PageSEO": {
+                                "PostSEO": {
                                   "type": "component"
                                 },
                                 "published_at": {
@@ -503,7 +503,7 @@
                     "id",
                     "Title",
                     "Slug",
-                    "PageSEO"
+                    "PostSEO"
                   ],
                   "properties": {
                     "id": {
@@ -512,16 +512,16 @@
                     "Title": {
                       "type": "string"
                     },
+                    "Slug": {
+                      "type": "string"
+                    },
                     "Body": {
                       "type": "dynamiczone"
-                    },
-                    "Slug": {
-                      "type": "uid"
                     },
                     "Parent": {
                       "type": "string"
                     },
-                    "PageSEO": {
+                    "PostSEO": {
                       "type": "component"
                     },
                     "published_at": {
@@ -570,7 +570,7 @@
                                 "id",
                                 "Title",
                                 "Slug",
-                                "PageSEO"
+                                "PostSEO"
                               ],
                               "properties": {
                                 "id": {
@@ -579,16 +579,16 @@
                                 "Title": {
                                   "type": "string"
                                 },
+                                "Slug": {
+                                  "type": "string"
+                                },
                                 "Body": {
                                   "type": "dynamiczone"
-                                },
-                                "Slug": {
-                                  "type": "uid"
                                 },
                                 "Parent": {
                                   "type": "string"
                                 },
-                                "PageSEO": {
+                                "PostSEO": {
                                   "type": "component"
                                 },
                                 "published_at": {

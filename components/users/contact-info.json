@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_users_contact_infos",
+  "info": {
+    "name": "ContactInfo",
+    "icon": "air-freshener",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Website": {
+      "type": "string",
+      "regex": "^(?:https:\\/\\/)[a-zA-Z0-9]+([\\-\\.]{1}[a-z0-9]+)*\\.[a-z]{2,5}(:[0-9]{1,5})?(\\/.*)?$"
+    },
+    "FacebookURL": {
+      "type": "string",
+      "regex": "^(?:https:\\/\\/)[a-zA-Z0-9]+([\\-\\.]{1}[a-z0-9]+)*\\.[a-z]{2,5}(:[0-9]{1,5})?(\\/.*)?$"
+    },
+    "LinkedInURL": {
+      "type": "string",
+      "regex": "^(?:https:\\/\\/)[a-zA-Z0-9]+([\\-\\.]{1}[a-z0-9]+)*\\.[a-z]{2,5}(:[0-9]{1,5})?(\\/.*)?$"
+    },
+    "TwitterURL": {
+      "type": "string",
+      "regex": "^(?:https:\\/\\/)[a-zA-Z0-9]+([\\-\\.]{1}[a-z0-9]+)*\\.[a-z]{2,5}(:[0-9]{1,5})?(\\/.*)?$"
+    }
+  }
+}

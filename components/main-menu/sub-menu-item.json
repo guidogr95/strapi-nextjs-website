@@ -2,7 +2,7 @@
   "collectionName": "components_main_menu_sub_menu_items",
   "info": {
     "name": "SubMenuItem",
-    "icon": "align-right"
+    "icon": "archive"
   },
   "options": {},
   "attributes": {
@@ -13,14 +13,14 @@
     "Page": {
       "model": "pages"
     },
-"LinkType": {
+    "LinkType": {
       "type": "enumeration",
       "enum": [
         "Custom",
         "Page"
       ],
-     "default": "Page",
-     "required": true
+      "required": true,
+      "default": "Page"
     },
     "CustomLink": {
       "type": "string"

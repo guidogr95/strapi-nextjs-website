@@ -2,7 +2,7 @@
   "collectionName": "components_footer_footer_nav_sub_items",
   "info": {
     "name": "FooterNavSubItem",
-    "icon": "angle-double-down"
+    "icon": "coffee"
   },
   "options": {},
   "attributes": {
@@ -22,8 +22,8 @@
         "Custom",
         "Page"
       ],
-      "default": "Custom",
-      "required": true
+      "required": true,
+      "default": "Custom"
     }
   }
 }

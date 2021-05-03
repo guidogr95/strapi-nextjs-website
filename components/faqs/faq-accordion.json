@@ -2,13 +2,14 @@
   "collectionName": "components_faqs_faq_accordions",
   "info": {
     "name": "FAQ Accordion",
-    "icon": "arrow-alt-circle-down"
+    "icon": "align-justify",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "AllowSearchBar": {
       "type": "boolean",
-      "default": true
+      "default": false
     },
     "Accordion": {
       "type": "component",

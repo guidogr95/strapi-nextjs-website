@@ -354,7 +354,7 @@
                           "id",
                           "Title",
                           "Slug",
-                          "PageSEO"
+                          "PostSEO"
                         ],
                         "properties": {
                           "id": {
@@ -363,16 +363,16 @@
                           "Title": {
                             "type": "string"
                           },
+                          "Slug": {
+                            "type": "string"
+                          },
                           "Body": {
                             "type": "dynamiczone"
-                          },
-                          "Slug": {
-                            "type": "uid"
                           },
                           "Parent": {
                             "type": "string"
                           },
-                          "PageSEO": {
+                          "PostSEO": {
                             "type": "component"
                           },
                           "published_at": {
@@ -420,39 +420,11 @@
                 "items": {
                   "type": "object",
                   "required": [
-                    "id",
-                    "Icon"
+                    "id"
                   ],
                   "properties": {
                     "id": {
                       "type": "string"
-                    },
-                    "Social": {
-                      "required": [
-                        "id",
-                        "Label",
-                        "Link"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "Label": {
-                          "type": "string"
-                        },
-                        "Link": {
-                          "type": "string"
-                        },
-                        "published_at": {
-                          "type": "string"
-                        },
-                        "created_by": {
-                          "type": "string"
-                        },
-                        "updated_by": {
-                          "type": "string"
-                        }
-                      }
                     },
                     "Icon": {
                       "required": [
@@ -511,6 +483,33 @@
                           "type": "object"
                         },
                         "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Social": {
+                      "required": [
+                        "id",
+                        "Label",
+                        "Link"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "Label": {
+                          "type": "string"
+                        },
+                        "Link": {
+                          "type": "string"
+                        },
+                        "published_at": {
                           "type": "string"
                         },
                         "created_by": {
@@ -570,7 +569,7 @@
                           "id",
                           "Title",
                           "Slug",
-                          "PageSEO"
+                          "PostSEO"
                         ],
                         "properties": {
                           "id": {
@@ -579,16 +578,16 @@
                           "Title": {
                             "type": "string"
                           },
+                          "Slug": {
+                            "type": "string"
+                          },
                           "Body": {
                             "type": "dynamiczone"
-                          },
-                          "Slug": {
-                            "type": "uid"
                           },
                           "Parent": {
                             "type": "string"
                           },
-                          "PageSEO": {
+                          "PostSEO": {
                             "type": "component"
                           },
                           "published_at": {
@@ -636,39 +635,11 @@
                 "items": {
                   "type": "object",
                   "required": [
-                    "id",
-                    "Icon"
+                    "id"
                   ],
                   "properties": {
                     "id": {
                       "type": "string"
-                    },
-                    "Social": {
-                      "required": [
-                        "id",
-                        "Label",
-                        "Link"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "Label": {
-                          "type": "string"
-                        },
-                        "Link": {
-                          "type": "string"
-                        },
-                        "published_at": {
-                          "type": "string"
-                        },
-                        "created_by": {
-                          "type": "string"
-                        },
-                        "updated_by": {
-                          "type": "string"
-                        }
-                      }
                     },
                     "Icon": {
                       "required": [
@@ -727,6 +698,33 @@
                           "type": "object"
                         },
                         "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Social": {
+                      "required": [
+                        "id",
+                        "Label",
+                        "Link"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "Label": {
+                          "type": "string"
+                        },
+                        "Link": {
+                          "type": "string"
+                        },
+                        "published_at": {
                           "type": "string"
                         },
                         "created_by": {

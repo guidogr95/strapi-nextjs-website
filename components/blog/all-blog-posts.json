@@ -2,7 +2,7 @@
   "collectionName": "components_blog_all_blog_posts",
   "info": {
     "name": "AllBlogPosts",
-    "icon": "clone"
+    "icon": "angle-double-down"
   },
   "options": {},
   "attributes": {

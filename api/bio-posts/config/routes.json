@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/bio-posts",
+      "handler": "bio-posts.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bio-posts/count",
+      "handler": "bio-posts.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bio-posts/:id",
+      "handler": "bio-posts.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/bio-posts",
+      "handler": "bio-posts.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/bio-posts/:id",
+      "handler": "bio-posts.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/bio-posts/:id",
+      "handler": "bio-posts.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -14,16 +14,15 @@ module.exports = {
     } else {
       entities = await strapi.services.pages.find(ctx.query);
     }
-
     for (const l in entities) {
 	if (entities[l].Body) {
             for (const i in entities[l].Body) {
                 if (entities[l].Body[i].__component === 'universal.card-grid-thumbnail-and-icon') {
-                    for (const j in entities[l].Body[i].CardGridTIItem) {
-                        if (entities[l].Body[i].CardGridTIItem[j].Page) {
-                            if (entities[l].Body[i].CardGridTIItem[j].Page.Parent) {
-                                const parent = await strapi.query('pages').find({ id: entities[l].Body[i].CardGridTIItem[j].Page.Parent })     
-                                if (parent) entities[l].Body[i].CardGridTIItem[j].Page.Parent = parent[0]
+                    for (const j in entities[l].Body[i].CardGridItem) {
+                        if (entities[l].Body[i].CardGridItem[j].Page) {
+                            if (entities[l].Body[i].CardGridItem[j].Page.Parent) {
+                                const parent = await strapi.query('pages').find({ id: entities[l].Body[i].CardGridItem[j].Page.Parent })     
+                                if (parent) entities[l].Body[i].CardGridItem[j].Page.Parent = parent[0]
                             }
                         }
                     }

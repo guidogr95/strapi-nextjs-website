@@ -2,8 +2,7 @@
   "collectionName": "components_blog_blog_nav_items",
   "info": {
     "name": "BlogNav-Item",
-    "icon": "arrow-down",
-    "description": ""
+    "icon": "blog"
   },
   "options": {},
   "attributes": {
@@ -13,8 +12,8 @@
     },
     "Slug": {
       "type": "string",
-      "unique": true,
-      "required": true
+      "required": true,
+      "unique": true
     }
   }
 }

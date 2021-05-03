@@ -1188,7 +1188,6 @@
         "required": [
           "id",
           "username",
-          "email",
           "fullname"
         ],
         "properties": {
@@ -1324,13 +1323,35 @@
                 "type": "string"
               }
             }
+          },
+          "ContactInfo": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "Website": {
+                "type": "string"
+              },
+              "FacebookURL": {
+                "type": "string"
+              },
+              "LinkedInURL": {
+                "type": "string"
+              },
+              "TwitterURL": {
+                "type": "string"
+              }
+            }
           }
         }
       },
       "NewUsersPermissionsUser": {
         "required": [
           "username",
-          "email",
           "fullname"
         ],
         "properties": {
@@ -1372,6 +1393,29 @@
           },
           "description": {
             "type": "string"
+          },
+          "ContactInfo": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "Website": {
+                "type": "string"
+              },
+              "FacebookURL": {
+                "type": "string"
+              },
+              "LinkedInURL": {
+                "type": "string"
+              },
+              "TwitterURL": {
+                "type": "string"
+              }
+            }
           },
           "created_by": {
             "type": "string"

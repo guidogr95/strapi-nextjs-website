@@ -528,7 +528,6 @@
               "required": [
                 "id",
                 "username",
-                "email",
                 "fullname"
               ],
               "properties": {
@@ -570,6 +569,9 @@
                 },
                 "ProfilePicture": {
                   "type": "string"
+                },
+                "ContactInfo": {
+                  "type": "component"
                 },
                 "created_by": {
                   "type": "string"

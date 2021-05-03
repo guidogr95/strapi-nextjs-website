@@ -2,8 +2,7 @@
   "collectionName": "components_universal_card_grid_ti_items",
   "info": {
     "name": "CardGridTI-Item",
-    "icon": "arrow-circle-down",
-    "description": ""
+    "icon": "sim-card"
   },
   "options": {},
   "attributes": {
@@ -29,8 +28,8 @@
         "Custom",
         "Page"
       ],
-      "default": "Custom",
-      "required": true
+      "required": true,
+      "default": "Custom"
     },
     "CustomLink": {
       "type": "string"

@@ -2,8 +2,7 @@
   "collectionName": "components_universal_accordions",
   "info": {
     "name": "Accordion",
-    "icon": "arrow-alt-circle-up",
-    "description": ""
+    "icon": "align-center"
   },
   "options": {},
   "attributes": {

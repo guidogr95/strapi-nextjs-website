@@ -1,9 +1,8 @@
 {
-  "collectionName": "components_universal_menu_item_mains",
+  "collectionName": "components_main_menu_menu_item_mains",
   "info": {
-    "name": "MenuItem-Main",
-    "icon": "angle-down",
-    "description": ""
+    "name": "MenuItemMain",
+    "icon": "align-left"
   },
   "options": {},
   "attributes": {
@@ -25,8 +24,8 @@
         "Custom",
         "Page"
       ],
-     "default": "Page",
-     "required": true
+      "required": true,
+      "default": "Page"
     },
     "CustomLink": {
       "type": "string"

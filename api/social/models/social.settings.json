@@ -2,8 +2,7 @@
   "kind": "collectionType",
   "collectionName": "socials",
   "info": {
-    "name": "Social",
-    "description": ""
+    "name": "Social"
   },
   "options": {
     "increments": true,

@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "blogs",
   "info": {
-    "name": "Blog",
+    "name": "Blogs",
     "description": ""
   },
   "options": {
@@ -26,14 +26,11 @@
         "images"
       ],
       "plugin": "upload",
-      "required": true
+      "required": false
     },
     "Featured": {
-      "type": "boolean"
-    },
-    "Published": {
-      "type": "datetime",
-      "required": true
+      "type": "boolean",
+      "default": false
     },
     "Content": {
       "type": "richtext"
@@ -43,8 +40,9 @@
     },
     "Slug": {
       "type": "string",
-      "regex": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
-      "required": true
+      "required": true,
+      "unique": true,
+      "regex": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
     },
     "TitleColor": {
       "type": "string"
@@ -53,6 +51,22 @@
       "type": "component",
       "repeatable": false,
       "component": "universal.link-to-resource"
+    },
+    "PostSEO": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo",
+      "required": true
+    },
+    "Tags": {
+      "collection": "tags"
+    },
+    "categories": {
+      "collection": "post-categories"
+    },
+    "Publication": {
+      "type": "date",
+      "required": true
     }
   }
 }

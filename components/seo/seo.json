@@ -2,7 +2,7 @@
   "collectionName": "components_seo_seos",
   "info": {
     "name": "SEO",
-    "icon": "bullhorn",
+    "icon": "search",
     "description": ""
   },
   "options": {},
@@ -11,18 +11,17 @@
       "type": "component",
       "repeatable": false,
       "component": "seo.google-seo",
-      "required": true
+      "required": false
     },
-    "FacebookSeo": {
+    "FacebookSEO": {
       "type": "component",
       "repeatable": false,
-      "component": "seo.social-media-seo"
+      "component": "seo.facebook-seo"
     },
-    "TwitterSeo": {
+    "TwitterSEO": {
       "type": "component",
       "repeatable": false,
-      "component": "seo.twitter-seo",
-      "required": true
+      "component": "seo.twitter-seo"
     }
   }
 }

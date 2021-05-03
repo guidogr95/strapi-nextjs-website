@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bio_posts",
+  "info": {
+    "name": "Bio Posts"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Post": {
+      "model": "blog"
+    }
+  }
+}

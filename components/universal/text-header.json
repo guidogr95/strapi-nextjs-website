@@ -2,13 +2,13 @@
   "collectionName": "components_universal_text_headers",
   "info": {
     "name": "TextHeader",
-    "icon": "asterisk",
+    "icon": "heading",
     "description": ""
   },
   "options": {},
   "attributes": {
     "Title": {
-      "type": "text",
+      "type": "string",
       "required": true
     },
     "Subtitle": {

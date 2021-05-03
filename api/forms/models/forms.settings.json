@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "forms",
+  "info": {
+    "name": "Forms",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "LegalConsent": {
+      "type": "component",
+      "repeatable": false,
+      "component": "forms.legal-consent",
+      "required": true
+    },
+    "SubmitButtonText": {
+      "type": "string",
+      "required": true,
+      "default": "Talk to Us!"
+    },
+    "Notice": {
+      "type": "richtext"
+    },
+    "Text": {
+      "type": "richtext"
+    },
+    "HubSpotInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "forms.hub-spot-info",
+      "required": true
+    },
+    "Fields": {
+      "type": "component",
+      "repeatable": false,
+      "component": "forms.fields"
+    }
+  }
+}

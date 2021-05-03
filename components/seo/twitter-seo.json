@@ -2,13 +2,14 @@
   "collectionName": "components_seo_twitter_seos",
   "info": {
     "name": "TwitterSEO",
-    "icon": "assistive-listening-systems"
+    "icon": "envelope-open-text",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "Description": {
       "type": "text",
-      "maxLength": 170
+      "maxLength": 350
     },
     "Title": {
       "type": "string",

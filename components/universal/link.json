@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_universal_links",
+  "info": {
+    "name": "Link",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "whitepapers_and_ebook": {
+      "model": "whitepapers-and-ebooks"
+    }
+  }
+}

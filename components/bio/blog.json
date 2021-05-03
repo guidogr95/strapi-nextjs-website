@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_bio_blogs",
+  "info": {
+    "name": "Blog",
+    "icon": "angle-double-right",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Post": {
+      "model": "blog"
+    }
+  }
+}

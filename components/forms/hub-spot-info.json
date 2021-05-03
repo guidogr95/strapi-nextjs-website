@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_forms_hub_spot_infos",
+  "info": {
+    "name": "HubSpotInfo",
+    "icon": "arrow-circle-up"
+  },
+  "options": {},
+  "attributes": {
+    "PortalId": {
+      "type": "string",
+      "required": true,
+      "default": "3344191"
+    },
+    "FormId": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

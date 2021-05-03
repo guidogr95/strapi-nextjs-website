@@ -518,9 +518,9 @@
         "required": [
           "id",
           "Title",
-          "Thumbnail",
-          "Published",
-          "Slug"
+          "Slug",
+          "PostSEO",
+          "Publication"
         ],
         "properties": {
           "id": {
@@ -533,7 +533,6 @@
             "required": [
               "id",
               "username",
-              "email",
               "fullname"
             ],
             "properties": {
@@ -575,6 +574,9 @@
               },
               "ProfilePicture": {
                 "type": "string"
+              },
+              "ContactInfo": {
+                "type": "component"
               },
               "created_by": {
                 "type": "string"
@@ -652,11 +654,8 @@
             }
           },
           "Featured": {
-            "type": "boolean"
-          },
-          "Published": {
-            "type": "string",
-            "format": "date-time"
+            "type": "boolean",
+            "default": false
           },
           "Content": {
             "type": "string"
@@ -716,6 +715,9 @@
                   "Title": {
                     "type": "string"
                   },
+                  "PostSEO": {
+                    "type": "component"
+                  },
                   "published_at": {
                     "type": "string"
                   },
@@ -728,6 +730,290 @@
                 }
               }
             }
+          },
+          "PostSEO": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "GoogleSEO": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "Title"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 350
+                  }
+                }
+              },
+              "FacebookSEO": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Url": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 350
+                  },
+                  "Image": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "SiteName": {
+                    "type": "string"
+                  }
+                }
+              },
+              "TwitterSEO": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 350
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Site": {
+                    "type": "string"
+                  },
+                  "Image": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "Creator": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "Tags": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "Name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "Name": {
+                  "type": "string"
+                },
+                "Description": {
+                  "type": "string"
+                },
+                "Slug": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "Name",
+                "Slug"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "Name": {
+                  "type": "string"
+                },
+                "Description": {
+                  "type": "string"
+                },
+                "Slug": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "Publication": {
+            "type": "string",
+            "format": "date"
           },
           "published_at": {
             "type": "string",
@@ -738,8 +1024,9 @@
       "NewBlog": {
         "required": [
           "Title",
-          "Published",
-          "Slug"
+          "Slug",
+          "PostSEO",
+          "Publication"
         ],
         "properties": {
           "Title": {
@@ -749,11 +1036,8 @@
             "type": "string"
           },
           "Featured": {
-            "type": "boolean"
-          },
-          "Published": {
-            "type": "string",
-            "format": "date-time"
+            "type": "boolean",
+            "default": false
           },
           "Content": {
             "type": "string"
@@ -813,6 +1097,9 @@
                   "Title": {
                     "type": "string"
                   },
+                  "PostSEO": {
+                    "type": "component"
+                  },
                   "published_at": {
                     "type": "string"
                   },
@@ -825,6 +1112,237 @@
                 }
               }
             }
+          },
+          "PostSEO": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "GoogleSEO": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "Title"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 350
+                  }
+                }
+              },
+              "FacebookSEO": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Url": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 350
+                  },
+                  "Image": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "SiteName": {
+                    "type": "string"
+                  }
+                }
+              },
+              "TwitterSEO": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string",
+                    "maxLength": 350
+                  },
+                  "Title": {
+                    "type": "string",
+                    "maxLength": 170
+                  },
+                  "Site": {
+                    "type": "string"
+                  },
+                  "Image": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "Creator": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "Tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "Publication": {
+            "type": "string",
+            "format": "date"
           },
           "published_at": {
             "type": "string",

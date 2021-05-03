@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_bio_tutorials",
+  "info": {
+    "name": "Tutorial",
+    "icon": "american-sign-language-interpreting",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Post": {
+      "model": "tutorials"
+    }
+  }
+}

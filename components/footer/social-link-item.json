@@ -2,14 +2,11 @@
   "collectionName": "components_footer_social_link_items",
   "info": {
     "name": "SocialLinkItem",
-    "icon": "adjust",
+    "icon": "unlink",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "Social": {
-      "model": "social"
-    },
     "Icon": {
       "model": "file",
       "via": "related",
@@ -17,7 +14,10 @@
         "images"
       ],
       "plugin": "upload",
-      "required": true
+      "required": false
+    },
+    "Social": {
+      "model": "social"
     }
   }
 }

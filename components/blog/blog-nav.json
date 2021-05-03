@@ -2,14 +2,16 @@
   "collectionName": "components_blog_blog_navs",
   "info": {
     "name": "BlogNav",
-    "icon": "align-center"
+    "icon": "address-card",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "BlogNavItem": {
       "type": "component",
       "repeatable": true,
-      "component": "blog.blog-nav-item"
+      "component": "blog.blog-nav-item",
+      "required": true
     }
   }
 }

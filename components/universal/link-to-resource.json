@@ -2,7 +2,7 @@
   "collectionName": "components_universal_link_to_resources",
   "info": {
     "name": "LinkToResource",
-    "icon": "arrow-right"
+    "icon": "link"
   },
   "options": {},
   "attributes": {

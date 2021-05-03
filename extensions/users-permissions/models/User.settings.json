@@ -21,7 +21,7 @@
       "type": "email",
       "minLength": 6,
       "configurable": false,
-      "required": true
+      "required": false
     },
     "provider": {
       "type": "string",
@@ -31,7 +31,8 @@
       "type": "password",
       "minLength": 6,
       "configurable": false,
-      "private": true
+      "private": true,
+      "required": false
     },
     "resetPasswordToken": {
       "type": "string",
@@ -73,6 +74,12 @@
         "images"
       ],
       "plugin": "upload",
+      "required": false
+    },
+    "ContactInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "users.contact-info",
       "required": false
     }
   }

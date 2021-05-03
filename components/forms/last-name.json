@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_forms_last_names",
+  "info": {
+    "name": "Last Name",
+    "icon": "angle-down"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    }
+  }
+}

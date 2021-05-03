@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_tutorials_tutorials_lists",
+  "info": {
+    "name": "Tutorials-List",
+    "icon": "clipboard-list"
+  },
+  "options": {},
+  "attributes": {
+    "MaxPosts": {
+      "type": "integer"
+    },
+    "Order": {
+      "type": "enumeration",
+      "enum": [
+        "Random",
+        "Date"
+      ],
+      "default": "Random"
+    }
+  }
+}

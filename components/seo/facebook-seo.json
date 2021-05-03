@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_seo_facebook_seos",
+  "info": {
+    "name": "FacebookSEO",
+    "icon": "users",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "maxLength": 170
+    },
+    "Url": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text",
+      "maxLength": 350
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "SiteName": {
+      "type": "string"
+    }
+  }
+}

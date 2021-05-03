@@ -15,31 +15,32 @@
       "type": "string",
       "required": true
     },
+    "Slug": {
+      "type": "string",
+      "required": true,
+      "regex": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "unique": true
+    },
     "Body": {
       "type": "dynamiczone",
       "components": [
         "blog.blog-nav",
         "blog.featured-post-slider",
         "blog.all-blog-posts",
-        "universal.small-header",
-        "whitepapers-ebooks.all-whitepapers-and-ebooks",
-        "tutorials.all-tutorials",
+        "universal.image-header",
+        "universal.white-papers-and-ebooks-list",
+        "tutorials.tutorials-list",
         "universal.text-header",
-        "videos.all-videos",
+        "videos.video-list",
         "faqs.faq-accordion",
         "universal.accordion",
         "universal.card-grid-thumbnail-and-icon"
       ]
     },
-    "Slug": {
-      "type": "uid",
-      "private": false,
-      "required": true
-    },
     "Parent": {
       "model": "pages"
     },
-    "PageSEO": {
+    "PostSEO": {
       "type": "component",
       "repeatable": false,
       "component": "seo.seo",

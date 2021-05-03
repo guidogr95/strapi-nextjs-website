@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_forms_fields",
+  "info": {
+    "name": "Fields",
+    "icon": "angle-up"
+  },
+  "options": {},
+  "attributes": {
+    "FirstName": {
+      "type": "component",
+      "repeatable": false,
+      "component": "forms.first-name"
+    },
+    "LastName": {
+      "type": "component",
+      "repeatable": false,
+      "component": "forms.last-name",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_universal_white_papers_and_ebooks_lists",
+  "info": {
+    "name": "WhitePapersAndEbooks_List",
+    "icon": "adjust"
+  },
+  "options": {},
+  "attributes": {
+    "Link": {
+      "type": "component",
+      "repeatable": true,
+      "component": "universal.link",
+      "required": true
+    }
+  }
+}

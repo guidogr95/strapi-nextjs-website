@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "whitepapers_and_ebooks",
   "info": {
-    "name": "whitepapers and ebooks",
+    "name": "Whitepapers and ebooks",
     "description": ""
   },
   "options": {
@@ -13,6 +13,7 @@
   "attributes": {
     "HeaderTitle": {
       "type": "string",
+      "unique": false,
       "required": true
     },
     "Subtitle": {
@@ -47,6 +48,12 @@
     "Title": {
       "type": "string",
       "required": true
+    },
+    "PostSEO": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo",
+      "required": false
     }
   }
 }

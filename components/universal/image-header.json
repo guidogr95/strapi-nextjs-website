@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_universal_image_headers",
+  "info": {
+    "name": "ImageHeader",
+    "icon": "file-image"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Subtitle": {
+      "type": "text",
+      "maxLength": 170
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Background": {
+      "type": "string",
+      "default": "#2a1659"
+    },
+    "TitleColor": {
+      "type": "string",
+      "default": "white"
+    },
+    "SubtitleColor": {
+      "type": "string",
+      "default": "white"
+    },
+    "HeaderImage": {
+      "type": "enumeration",
+      "enum": [
+        "Custom",
+        "Resources",
+        "Whitepapers",
+        "Tutorials"
+      ],
+      "required": true,
+      "default": "Custom"
+    }
+  }
+}

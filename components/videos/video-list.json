@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_videos_video_lists",
+  "info": {
+    "name": "VideoList",
+    "icon": "video"
+  },
+  "options": {},
+  "attributes": {
+    "DisplayFeatured": {
+      "type": "boolean",
+      "default": true
+    },
+    "Video": {
+      "type": "component",
+      "repeatable": true,
+      "component": "videos.video"
+    }
+  }
+}
